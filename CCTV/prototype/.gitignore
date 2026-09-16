@@ -1,0 +1,74 @@
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.tox/
+pip-wheel-metadata/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Environment / secrets ─────────────────────────────────────────────────────
+.env
+*.env
+!.env.example
+
+# ── Model weights  (large binary files — download on demand) ─────────────────
+*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+
+# ── IBVAP runtime data ────────────────────────────────────────────────────────
+# Snapshot images are written by the API at runtime; never commit them.
+snapshots/
+
+# Ultralytics local run artefacts
+runs/
+
+# ── Docker ───────────────────────────────────────────────────────────────────
+# Keep docker-compose.yml but exclude override files with local secrets
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ── Database ─────────────────────────────────────────────────────────────────
+*.sqlite
+*.db
+*.sql
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS / Editor artefacts ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+.history/
+
+# ── Scratch / generator scripts (dev-only helpers) ───────────────────────────
+_gen.py
+smoke_test.py
+prototype bck3.rar
+prototype updt.zip

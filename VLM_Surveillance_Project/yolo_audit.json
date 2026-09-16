@@ -1,0 +1,3 @@
+{
+    "error": "ERROR  d:\\VLM\\models\\vehicle_classifier\\v_FULL_20260913_232909\\best.pt references types outside the supported Ultralytics checkpoint format. Use an official Ultralytics model, i.e. 'yolo predict model=yolo26n.pt'"
+}

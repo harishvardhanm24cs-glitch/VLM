@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: ibvap_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ibvap_user
+      POSTGRES_PASSWORD: ibvap_secret
+      POSTGRES_DB: ibvap_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ibvap_user -d ibvap_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ganache:
+    image: trufflesuite/ganache:latest
+    container_name: ibvap_blockchain
+    ports:
+      - "8545:8545"
+    command: ["--wallet.deterministic", "--chain.networkId=5777"]
+
+volumes:
+  postgres_data:
+    driver: local

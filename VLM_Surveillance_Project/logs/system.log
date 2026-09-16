@@ -1,0 +1,1017 @@
+2026-09-09 10:36:06,926 [INFO] main: Initializing Subsystems...
+2026-09-09 10:36:10,081 [INFO] qwen_model: Initializing QwenVLWrapper with model Qwen/Qwen2.5-VL-3B-Instruct on cpu
+2026-09-09 10:36:10,081 [INFO] qwen_model: Loading Qwen2.5-VL model... This might take a while.
+2026-09-09 10:36:10,847 [INFO] _client: HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+2026-09-09 10:36:11,150 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 10:36:11,176 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/config.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fconfig.json=&etag=%220ae1866f05ab0153ad293bdc92bb1b842c4d95b1%22 "HTTP/1.1 200 OK"
+2026-09-09 10:36:11,253 [INFO] _client: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/config.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fconfig.json=&etag=%220ae1866f05ab0153ad293bdc92bb1b842c4d95b1%22 "HTTP/1.1 200 OK"
+2026-09-09 10:36:11,563 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-09-09 10:36:11,868 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 10:36:11,889 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/model.safetensors.index.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fmodel.safetensors.index.json=&etag=%227a3ec4f48662e38593f8cab48fe12a4f28003aba%22 "HTTP/1.1 200 OK"
+2026-09-09 10:36:11,971 [INFO] _client: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/model.safetensors.index.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fmodel.safetensors.index.json=&etag=%227a3ec4f48662e38593f8cab48fe12a4f28003aba%22 "HTTP/1.1 200 OK"
+2026-09-09 10:36:12,277 [INFO] _client: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-VL-3B-Instruct/revision/main "HTTP/1.1 200 OK"
+2026-09-09 10:36:12,585 [INFO] _client: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-VL-3B-Instruct/tree/66285546d2b821cf421d4f5eb2576359d3770cd3?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-09 10:36:14,026 [INFO] _client: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-VL-3B-Instruct/xet-read-token/66285546d2b821cf421d4f5eb2576359d3770cd3 "HTTP/1.1 200 OK"
+2026-09-09 11:47:07,052 [INFO] main: Initializing Subsystems...
+2026-09-09 11:47:07,175 [INFO] qwen_model: Initializing QwenVLWrapper with model Qwen/Qwen2.5-VL-3B-Instruct on cpu
+2026-09-09 11:47:07,175 [INFO] qwen_model: Loading Qwen2.5-VL model... This might take a while.
+2026-09-09 11:47:08,274 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 11:47:08,447 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/config.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fconfig.json=&etag=%220ae1866f05ab0153ad293bdc92bb1b842c4d95b1%22 "HTTP/1.1 200 OK"
+2026-09-09 11:47:08,818 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-09-09 11:47:08,819 [WARNING] _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-09 11:47:09,227 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 11:47:09,458 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/model.safetensors.index.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fmodel.safetensors.index.json=&etag=%227a3ec4f48662e38593f8cab48fe12a4f28003aba%22 "HTTP/1.1 200 OK"
+2026-09-09 11:47:09,893 [INFO] _client: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-VL-3B-Instruct/revision/main "HTTP/1.1 200 OK"
+2026-09-09 11:51:59,375 [INFO] main: Initializing Subsystems...
+2026-09-09 11:51:59,478 [INFO] qwen_model: Initializing QwenVLWrapper with model Qwen/Qwen2.5-VL-3B-Instruct on cpu
+2026-09-09 11:51:59,478 [INFO] qwen_model: Loading Qwen2.5-VL model... This might take a while.
+2026-09-09 11:52:00,494 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 11:52:00,494 [WARNING] _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-09 11:52:00,622 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/config.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fconfig.json=&etag=%220ae1866f05ab0153ad293bdc92bb1b842c4d95b1%22 "HTTP/1.1 200 OK"
+2026-09-09 11:52:01,035 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-09-09 11:52:01,395 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 11:52:02,409 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/model.safetensors.index.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fmodel.safetensors.index.json=&etag=%227a3ec4f48662e38593f8cab48fe12a4f28003aba%22 "HTTP/1.1 200 OK"
+2026-09-09 11:52:04,067 [INFO] _client: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-VL-3B-Instruct/revision/main "HTTP/1.1 200 OK"
+2026-09-09 12:04:31,504 [INFO] main: Initializing Subsystems...
+2026-09-09 12:04:31,594 [INFO] qwen_model: Initializing QwenVLWrapper with model Qwen/Qwen2.5-VL-3B-Instruct on cpu
+2026-09-09 12:04:31,594 [INFO] qwen_model: Loading Qwen2.5-VL model... This might take a while.
+2026-09-09 12:04:42,567 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 12:04:42,691 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/config.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fconfig.json=&etag=%220ae1866f05ab0153ad293bdc92bb1b842c4d95b1%22 "HTTP/1.1 200 OK"
+2026-09-09 12:04:43,043 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-09-09 12:04:43,044 [WARNING] _http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-09 12:04:43,409 [INFO] _client: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-09 12:04:43,586 [INFO] _client: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-VL-3B-Instruct/66285546d2b821cf421d4f5eb2576359d3770cd3/model.safetensors.index.json?%2FQwen%2FQwen2.5-VL-3B-Instruct%2Fresolve%2Fmain%2Fmodel.safetensors.index.json=&etag=%227a3ec4f48662e38593f8cab48fe12a4f28003aba%22 "HTTP/1.1 200 OK"
+2026-09-09 12:04:43,942 [INFO] _client: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-VL-3B-Instruct/revision/main "HTTP/1.1 200 OK"
+2026-09-10 18:44:16,569 [INFO] main: Initializing Subsystems...
+2026-09-10 18:44:20,725 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 18:44:20,726 [INFO] main: Subsystem initialization complete.
+2026-09-10 18:44:20,728 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\uploaded_aactv.mp4
+2026-09-10 18:44:40,420 [INFO] main: Processed Frame 100 (4.00s). Active tracks: 2
+2026-09-10 18:44:46,195 [INFO] main: Processed Frame 200 (8.00s). Active tracks: 1
+2026-09-10 18:44:52,412 [INFO] main: Processed Frame 300 (12.00s). Active tracks: 1
+2026-09-10 18:44:59,846 [INFO] main: Processed Frame 400 (16.00s). Active tracks: 2
+2026-09-10 18:45:05,613 [INFO] main: Processed Frame 500 (20.00s). Active tracks: 0
+2026-09-10 18:45:09,130 [ERROR] base_events: Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-10 18:45:13,089 [ERROR] base_events: Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-10 18:45:15,190 [INFO] main: Processed Frame 600 (24.00s). Active tracks: 1
+2026-09-10 18:45:21,897 [INFO] main: Processed Frame 700 (28.00s). Active tracks: 3
+2026-09-10 18:45:28,555 [INFO] main: Processed Frame 800 (32.00s). Active tracks: 0
+2026-09-10 18:45:34,473 [INFO] main: Processed Frame 900 (36.00s). Active tracks: 0
+2026-09-10 18:45:41,443 [INFO] main: Processed Frame 1000 (40.00s). Active tracks: 1
+2026-09-10 18:45:47,622 [INFO] main: Processed Frame 1100 (44.00s). Active tracks: 0
+2026-09-10 18:45:53,784 [INFO] main: Processed Frame 1200 (48.00s). Active tracks: 0
+2026-09-10 18:45:59,965 [INFO] main: Processed Frame 1300 (52.00s). Active tracks: 0
+2026-09-10 18:46:04,848 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 18:46:04,891 [INFO] event_engine: Saved 0 events to JSON and CSV.
+2026-09-10 18:46:04,891 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 18:46:04,893 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 18:47:13,501 [INFO] pipeline_runner: Pipeline thread started for video: D:\VLM\VLM_Surveillance_Project\videos\uploaded_aactv.mp4
+2026-09-10 18:47:13,509 [INFO] main: Initializing Subsystems...
+2026-09-10 18:47:13,686 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 18:47:13,688 [INFO] main: Subsystem initialization complete.
+2026-09-10 18:47:13,688 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\uploaded_aactv.mp4
+2026-09-10 18:47:19,823 [INFO] main: Processed Frame 100 (4.00s). Active tracks: 2
+2026-09-10 18:47:26,039 [INFO] main: Processed Frame 200 (8.00s). Active tracks: 1
+2026-09-10 18:47:31,584 [INFO] main: Processed Frame 300 (12.00s). Active tracks: 1
+2026-09-10 18:47:37,194 [INFO] main: Processed Frame 400 (16.00s). Active tracks: 2
+2026-09-10 18:47:43,972 [INFO] main: Processed Frame 500 (20.00s). Active tracks: 0
+2026-09-10 18:47:50,839 [INFO] main: Processed Frame 600 (24.00s). Active tracks: 1
+2026-09-10 18:47:57,629 [INFO] main: Processed Frame 700 (28.00s). Active tracks: 3
+2026-09-10 18:48:03,665 [INFO] main: Processed Frame 800 (32.00s). Active tracks: 0
+2026-09-10 18:48:09,455 [INFO] main: Processed Frame 900 (36.00s). Active tracks: 0
+2026-09-10 18:48:15,808 [INFO] main: Processed Frame 1000 (40.00s). Active tracks: 1
+2026-09-10 18:48:21,966 [INFO] main: Processed Frame 1100 (44.00s). Active tracks: 0
+2026-09-10 18:48:28,159 [INFO] main: Processed Frame 1200 (48.00s). Active tracks: 0
+2026-09-10 18:48:35,613 [INFO] main: Processed Frame 1300 (52.00s). Active tracks: 0
+2026-09-10 18:48:42,364 [INFO] main: Processed Frame 1400 (56.00s). Active tracks: 0
+2026-09-10 18:48:48,048 [INFO] main: Processed Frame 1500 (60.00s). Active tracks: 1
+2026-09-10 18:48:55,143 [INFO] main: Processed Frame 1600 (64.00s). Active tracks: 1
+2026-09-10 18:49:01,982 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 18:49:02,029 [INFO] event_engine: Saved 0 events to JSON and CSV.
+2026-09-10 18:49:02,029 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 18:49:02,029 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 18:56:13,466 [INFO] pipeline_runner: Pipeline thread started for video: D:\VLM\VLM_Surveillance_Project\videos\uploaded_aactv.mp4
+2026-09-10 18:56:13,476 [INFO] main: Initializing Subsystems...
+2026-09-10 18:56:13,576 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 18:56:13,579 [INFO] main: Subsystem initialization complete.
+2026-09-10 18:56:13,579 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\uploaded_aactv.mp4
+2026-09-10 18:56:20,176 [INFO] main: Processed Frame 100 (4.00s). Active tracks: 2
+2026-09-10 18:56:26,737 [INFO] main: Processed Frame 200 (8.00s). Active tracks: 1
+2026-09-10 18:56:33,131 [INFO] main: Processed Frame 300 (12.00s). Active tracks: 1
+2026-09-10 18:56:38,416 [INFO] main: Processed Frame 400 (16.00s). Active tracks: 2
+2026-09-10 18:56:43,847 [INFO] main: Processed Frame 500 (20.00s). Active tracks: 0
+2026-09-10 18:56:49,619 [INFO] main: Processed Frame 600 (24.00s). Active tracks: 1
+2026-09-10 18:56:55,485 [INFO] main: Processed Frame 700 (28.00s). Active tracks: 3
+2026-09-10 18:57:01,724 [INFO] main: Processed Frame 800 (32.00s). Active tracks: 0
+2026-09-10 18:57:07,612 [INFO] main: Processed Frame 900 (36.00s). Active tracks: 0
+2026-09-10 18:57:13,778 [INFO] main: Processed Frame 1000 (40.00s). Active tracks: 1
+2026-09-10 18:57:19,724 [INFO] main: Processed Frame 1100 (44.00s). Active tracks: 0
+2026-09-10 18:57:26,117 [INFO] main: Processed Frame 1200 (48.00s). Active tracks: 0
+2026-09-10 18:57:32,822 [INFO] main: Processed Frame 1300 (52.00s). Active tracks: 0
+2026-09-10 18:57:40,112 [INFO] main: Processed Frame 1400 (56.00s). Active tracks: 0
+2026-09-10 18:57:45,792 [INFO] main: Processed Frame 1500 (60.00s). Active tracks: 1
+2026-09-10 18:57:53,956 [INFO] main: Processed Frame 1600 (64.00s). Active tracks: 1
+2026-09-10 18:57:58,861 [INFO] pipeline_runner: Pipeline thread started for video: D:\VLM\VLM_Surveillance_Project\videos\uploaded_acctv.mp4
+2026-09-10 18:57:58,868 [INFO] main: Initializing Subsystems...
+2026-09-10 18:57:58,995 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 18:57:58,997 [INFO] main: Subsystem initialization complete.
+2026-09-10 18:57:58,997 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\uploaded_acctv.mp4
+2026-09-10 18:57:59,519 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 18:57:59,599 [INFO] event_engine: Saved 0 events to JSON and CSV.
+2026-09-10 18:57:59,600 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 18:57:59,601 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 18:58:06,109 [INFO] main: Processed Frame 100 (4.00s). Active tracks: 0
+2026-09-10 18:58:12,097 [INFO] main: Processed Frame 200 (8.00s). Active tracks: 0
+2026-09-10 18:58:18,064 [INFO] main: Processed Frame 300 (12.00s). Active tracks: 0
+2026-09-10 18:58:24,145 [INFO] main: Processed Frame 400 (16.00s). Active tracks: 0
+2026-09-10 18:58:30,335 [INFO] main: Processed Frame 500 (20.00s). Active tracks: 0
+2026-09-10 18:58:35,958 [INFO] main: Processed Frame 600 (24.00s). Active tracks: 0
+2026-09-10 18:58:41,466 [INFO] main: Processed Frame 700 (28.00s). Active tracks: 0
+2026-09-10 18:58:47,929 [INFO] main: Processed Frame 800 (32.00s). Active tracks: 0
+2026-09-10 18:58:53,517 [INFO] main: Processed Frame 900 (36.00s). Active tracks: 0
+2026-09-10 18:58:59,131 [INFO] main: Processed Frame 1000 (40.00s). Active tracks: 0
+2026-09-10 18:59:04,870 [INFO] main: Processed Frame 1100 (44.00s). Active tracks: 0
+2026-09-10 18:59:10,306 [INFO] main: Processed Frame 1200 (48.00s). Active tracks: 0
+2026-09-10 18:59:16,053 [INFO] main: Processed Frame 1300 (52.00s). Active tracks: 0
+2026-09-10 18:59:22,400 [INFO] main: Processed Frame 1400 (56.00s). Active tracks: 0
+2026-09-10 18:59:39,295 [INFO] main: Processed Frame 1500 (60.00s). Active tracks: 0
+2026-09-10 18:59:50,106 [INFO] main: Processed Frame 1600 (64.00s). Active tracks: 2
+2026-09-10 18:59:58,242 [INFO] main: Processed Frame 1700 (68.00s). Active tracks: 1
+2026-09-10 19:00:03,982 [INFO] main: Processed Frame 1800 (72.00s). Active tracks: 1
+2026-09-10 19:00:09,591 [INFO] main: Processed Frame 1900 (76.00s). Active tracks: 0
+2026-09-10 19:00:15,030 [INFO] main: Processed Frame 2000 (80.00s). Active tracks: 1
+2026-09-10 19:00:23,595 [INFO] main: Processed Frame 2100 (84.00s). Active tracks: 2
+2026-09-10 19:00:33,051 [INFO] main: Processed Frame 2200 (88.00s). Active tracks: 3
+2026-09-10 19:00:41,969 [INFO] main: Processed Frame 2300 (92.00s). Active tracks: 1
+2026-09-10 19:00:50,760 [INFO] main: Processed Frame 2400 (96.00s). Active tracks: 0
+2026-09-10 19:00:58,394 [INFO] main: Processed Frame 2500 (100.00s). Active tracks: 1
+2026-09-10 19:01:06,753 [INFO] main: Processed Frame 2600 (104.00s). Active tracks: 1
+2026-09-10 19:01:13,042 [INFO] main: Processed Frame 2700 (108.00s). Active tracks: 0
+2026-09-10 19:01:25,551 [INFO] main: Processed Frame 2800 (112.00s). Active tracks: 0
+2026-09-10 19:01:35,530 [INFO] main: Processed Frame 2900 (116.00s). Active tracks: 1
+2026-09-10 19:01:43,540 [INFO] main: Processed Frame 3000 (120.00s). Active tracks: 1
+2026-09-10 19:01:51,152 [INFO] main: Processed Frame 3100 (124.00s). Active tracks: 0
+2026-09-10 19:01:58,998 [INFO] main: Processed Frame 3200 (128.00s). Active tracks: 1
+2026-09-10 19:02:06,240 [INFO] main: Processed Frame 3300 (132.00s). Active tracks: 1
+2026-09-10 19:02:16,607 [INFO] main: Processed Frame 3400 (136.00s). Active tracks: 2
+2026-09-10 19:02:25,234 [INFO] main: Processed Frame 3500 (140.00s). Active tracks: 2
+2026-09-10 19:02:31,946 [INFO] main: Processed Frame 3600 (144.00s). Active tracks: 2
+2026-09-10 19:02:39,367 [INFO] main: Processed Frame 3700 (148.00s). Active tracks: 0
+2026-09-10 19:02:46,559 [INFO] main: Processed Frame 3800 (152.00s). Active tracks: 0
+2026-09-10 19:02:52,423 [INFO] main: Processed Frame 3900 (156.00s). Active tracks: 0
+2026-09-10 19:02:57,968 [INFO] main: Processed Frame 4000 (160.00s). Active tracks: 0
+2026-09-10 19:03:03,495 [INFO] main: Processed Frame 4100 (164.00s). Active tracks: 0
+2026-09-10 19:03:09,894 [INFO] main: Processed Frame 4200 (168.00s). Active tracks: 0
+2026-09-10 19:03:16,248 [INFO] main: Processed Frame 4300 (172.00s). Active tracks: 0
+2026-09-10 19:03:23,001 [INFO] main: Processed Frame 4400 (176.00s). Active tracks: 0
+2026-09-10 19:03:32,996 [INFO] main: Processed Frame 4500 (180.00s). Active tracks: 0
+2026-09-10 19:03:40,066 [INFO] main: Processed Frame 4600 (184.00s). Active tracks: 0
+2026-09-10 19:03:45,666 [INFO] main: Processed Frame 4700 (188.00s). Active tracks: 0
+2026-09-10 19:03:51,879 [INFO] main: Processed Frame 4800 (192.00s). Active tracks: 0
+2026-09-10 19:03:57,564 [INFO] main: Processed Frame 4900 (196.00s). Active tracks: 0
+2026-09-10 19:04:06,605 [INFO] main: Processed Frame 5000 (200.00s). Active tracks: 0
+2026-09-10 19:04:13,031 [INFO] main: Processed Frame 5100 (204.00s). Active tracks: 0
+2026-09-10 19:08:05,292 [INFO] main: Initializing Subsystems...
+2026-09-10 19:08:05,487 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 19:08:05,488 [INFO] main: Subsystem initialization complete.
+2026-09-10 19:08:05,488 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\uploaded_acctv.mp4
+2026-09-10 19:08:14,263 [INFO] main: Processed Frame 100 (4.00s). Active tracks: 0
+2026-09-10 19:08:22,083 [INFO] main: Processed Frame 200 (8.00s). Active tracks: 0
+2026-09-10 19:08:30,247 [INFO] main: Processed Frame 300 (12.00s). Active tracks: 0
+2026-09-10 19:08:38,760 [INFO] main: Processed Frame 400 (16.00s). Active tracks: 0
+2026-09-10 19:08:48,092 [INFO] main: Processed Frame 500 (20.00s). Active tracks: 0
+2026-09-10 19:08:57,188 [INFO] main: Processed Frame 600 (24.00s). Active tracks: 0
+2026-09-10 19:09:06,272 [INFO] main: Processed Frame 700 (28.00s). Active tracks: 0
+2026-09-10 19:09:14,623 [INFO] main: Processed Frame 800 (32.00s). Active tracks: 0
+2026-09-10 19:09:23,003 [INFO] main: Processed Frame 900 (36.00s). Active tracks: 0
+2026-09-10 19:09:31,860 [INFO] main: Processed Frame 1000 (40.00s). Active tracks: 0
+2026-09-10 19:09:42,131 [INFO] main: Processed Frame 1100 (44.00s). Active tracks: 0
+2026-09-10 19:09:52,094 [INFO] main: Processed Frame 1200 (48.00s). Active tracks: 0
+2026-09-10 19:10:01,054 [INFO] main: Processed Frame 1300 (52.00s). Active tracks: 0
+2026-09-10 19:10:09,454 [INFO] main: Processed Frame 1400 (56.00s). Active tracks: 0
+2026-09-10 19:10:18,052 [INFO] main: Processed Frame 1500 (60.00s). Active tracks: 0
+2026-09-10 19:10:24,025 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 1
+2026-09-10 19:10:24,026 [INFO] vlm_analyzer: Triggering VLM analysis for Event b6f7769a-dfb9-47a4-9975-48005dcd7273
+2026-09-10 19:10:25,227 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:10:26,244 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurTYWrR1ZNP7yJxryvf"}
+2026-09-10 19:10:26,251 [INFO] vlm_analyzer: Saved 1 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:10:26,929 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 2
+2026-09-10 19:10:26,929 [INFO] vlm_analyzer: Triggering VLM analysis for Event 0479a4d0-d078-4842-910e-d60f3def55c3
+2026-09-10 19:10:26,940 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:10:27,878 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurTfACf9n5dnjJ7uVv3"}
+2026-09-10 19:10:27,881 [INFO] vlm_analyzer: Saved 2 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:10:31,288 [INFO] main: Processed Frame 1600 (64.00s). Active tracks: 2
+2026-09-10 19:10:40,514 [INFO] main: Processed Frame 1700 (68.00s). Active tracks: 1
+2026-09-10 19:10:42,955 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 6
+2026-09-10 19:10:42,956 [INFO] vlm_analyzer: Triggering VLM analysis for Event a38cb670-39bb-4aad-91ec-722f8c55786a
+2026-09-10 19:10:42,964 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:10:44,181 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurUqjj3WqdbJdiv7HG2"}
+2026-09-10 19:10:44,185 [INFO] vlm_analyzer: Saved 3 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:10:51,087 [INFO] main: Processed Frame 1800 (72.00s). Active tracks: 1
+2026-09-10 19:10:53,538 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 8
+2026-09-10 19:10:53,539 [INFO] vlm_analyzer: Triggering VLM analysis for Event 1b7ffe80-4443-4301-bf0e-5d8dff32ba38
+2026-09-10 19:10:53,549 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:10:54,682 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurVdP6wLndz9DmGAQgb"}
+2026-09-10 19:10:54,686 [INFO] vlm_analyzer: Saved 4 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:11:01,662 [INFO] main: Processed Frame 1900 (76.00s). Active tracks: 0
+2026-09-10 19:11:11,107 [INFO] main: Processed Frame 2000 (80.00s). Active tracks: 1
+2026-09-10 19:11:19,260 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 19
+2026-09-10 19:11:19,261 [INFO] vlm_analyzer: Triggering VLM analysis for Event 70f86d96-16e2-4a02-94bb-d443024a00f0
+2026-09-10 19:11:19,269 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:11:20,135 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurXX6PVE3GSsjpqiir4"}
+2026-09-10 19:11:20,140 [INFO] vlm_analyzer: Saved 5 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:11:21,911 [INFO] main: Processed Frame 2100 (84.00s). Active tracks: 2
+2026-09-10 19:11:24,746 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 20
+2026-09-10 19:11:24,747 [INFO] vlm_analyzer: Triggering VLM analysis for Event 7afc38ea-480e-4d97-8abd-32bbb1396ad6
+2026-09-10 19:11:24,756 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:11:25,667 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurXvVJbNE1YeExNMJYD"}
+2026-09-10 19:11:25,671 [INFO] vlm_analyzer: Saved 6 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:11:33,503 [INFO] main: Processed Frame 2200 (88.00s). Active tracks: 3
+2026-09-10 19:11:43,452 [INFO] main: Processed Frame 2300 (92.00s). Active tracks: 1
+2026-09-10 19:11:53,096 [INFO] main: Processed Frame 2400 (96.00s). Active tracks: 0
+2026-09-10 19:12:00,134 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 28
+2026-09-10 19:12:00,134 [INFO] vlm_analyzer: Triggering VLM analysis for Event e4a29395-0eb4-4c8e-b384-7861f89aa072
+2026-09-10 19:12:00,143 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:12:01,379 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeuraXvpcGgHeAdcWqkZs"}
+2026-09-10 19:12:01,383 [INFO] vlm_analyzer: Saved 7 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:12:03,595 [INFO] main: Processed Frame 2500 (100.00s). Active tracks: 1
+2026-09-10 19:12:11,455 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 29
+2026-09-10 19:12:11,456 [INFO] vlm_analyzer: Triggering VLM analysis for Event 9054023a-8335-49f5-b833-22b3d935505e
+2026-09-10 19:12:11,467 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:12:12,774 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurbNvsHmzgj3Lz8NAzy"}
+2026-09-10 19:12:12,778 [INFO] vlm_analyzer: Saved 8 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:12:15,723 [INFO] main: Processed Frame 2600 (104.00s). Active tracks: 1
+2026-09-10 19:12:23,913 [INFO] main: Processed Frame 2700 (108.00s). Active tracks: 0
+2026-09-10 19:12:32,119 [INFO] main: Processed Frame 2800 (112.00s). Active tracks: 0
+2026-09-10 19:12:41,490 [INFO] main: Processed Frame 2900 (116.00s). Active tracks: 1
+2026-09-10 19:12:49,010 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 31
+2026-09-10 19:12:49,010 [INFO] vlm_analyzer: Triggering VLM analysis for Event 13081998-bdc4-4f96-97e1-e0a3fd4729fe
+2026-09-10 19:12:49,021 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:12:50,059 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Ceure95knzRxTFtj2ZQhZ"}
+2026-09-10 19:12:50,065 [INFO] vlm_analyzer: Saved 9 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:12:51,677 [INFO] main: Processed Frame 3000 (120.00s). Active tracks: 1
+2026-09-10 19:13:00,547 [INFO] main: Processed Frame 3100 (124.00s). Active tracks: 0
+2026-09-10 19:13:07,192 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 34
+2026-09-10 19:13:07,193 [INFO] vlm_analyzer: Triggering VLM analysis for Event e789887a-a5a2-4bc0-bf77-ae966d83ea65
+2026-09-10 19:13:07,202 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:13:08,481 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurfUf1ZDu3QUSd4b8w2"}
+2026-09-10 19:13:08,486 [INFO] vlm_analyzer: Saved 10 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:13:11,108 [INFO] main: Processed Frame 3200 (128.00s). Active tracks: 1
+2026-09-10 19:13:20,079 [INFO] main: Processed Frame 3300 (132.00s). Active tracks: 1
+2026-09-10 19:13:24,584 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 36
+2026-09-10 19:13:24,584 [INFO] vlm_analyzer: Triggering VLM analysis for Event 709e1244-0154-4809-a38b-ee2b15498d4d
+2026-09-10 19:13:24,594 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:13:25,697 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeurgmFRqVX6VnNnMEhhY"}
+2026-09-10 19:13:25,702 [INFO] vlm_analyzer: Saved 11 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:13:28,882 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 39
+2026-09-10 19:13:28,883 [INFO] vlm_analyzer: Triggering VLM analysis for Event 1e392dad-4d99-42d1-a2de-c0a9a519d022
+2026-09-10 19:13:28,892 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:13:29,880 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Ceurh56UpTC5hsr9dyLG7"}
+2026-09-10 19:13:29,883 [INFO] vlm_analyzer: Saved 12 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:13:32,030 [INFO] main: Processed Frame 3400 (136.00s). Active tracks: 2
+2026-09-10 19:13:41,872 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 41
+2026-09-10 19:13:41,872 [INFO] vlm_analyzer: Triggering VLM analysis for Event ba61417e-cb62-433a-87a2-6ae0a5152081
+2026-09-10 19:13:41,882 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:13:42,758 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Ceuri2gu7WHSHXFaqkcj2"}
+2026-09-10 19:13:42,762 [INFO] vlm_analyzer: Saved 13 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:13:42,885 [INFO] main: Processed Frame 3500 (140.00s). Active tracks: 2
+2026-09-10 19:13:52,900 [INFO] main: Processed Frame 3600 (144.00s). Active tracks: 2
+2026-09-10 19:13:54,550 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 43
+2026-09-10 19:13:54,550 [INFO] vlm_analyzer: Triggering VLM analysis for Event a99aa34f-a979-41d1-abf4-04cc8be45454
+2026-09-10 19:13:54,560 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:13:55,694 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Ceuriy8cVfGGiJjzuUHRu"}
+2026-09-10 19:13:55,708 [INFO] vlm_analyzer: Saved 14 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:14:03,283 [INFO] main: Processed Frame 3700 (148.00s). Active tracks: 0
+2026-09-10 19:14:12,426 [INFO] main: Processed Frame 3800 (152.00s). Active tracks: 0
+2026-09-10 19:14:24,027 [INFO] main: Processed Frame 3900 (156.00s). Active tracks: 0
+2026-09-10 19:14:35,928 [INFO] main: Processed Frame 4000 (160.00s). Active tracks: 0
+2026-09-10 19:14:47,332 [INFO] main: Processed Frame 4100 (164.00s). Active tracks: 0
+2026-09-10 19:14:59,205 [INFO] main: Processed Frame 4200 (168.00s). Active tracks: 0
+2026-09-10 19:15:11,216 [INFO] main: Processed Frame 4300 (172.00s). Active tracks: 0
+2026-09-10 19:15:23,632 [INFO] main: Processed Frame 4400 (176.00s). Active tracks: 0
+2026-09-10 19:15:35,521 [INFO] main: Processed Frame 4500 (180.00s). Active tracks: 0
+2026-09-10 19:15:44,256 [INFO] main: Processed Frame 4600 (184.00s). Active tracks: 0
+2026-09-10 19:15:52,745 [INFO] main: Processed Frame 4700 (188.00s). Active tracks: 0
+2026-09-10 19:16:01,060 [INFO] main: Processed Frame 4800 (192.00s). Active tracks: 0
+2026-09-10 19:16:09,471 [INFO] main: Processed Frame 4900 (196.00s). Active tracks: 0
+2026-09-10 19:16:17,916 [INFO] main: Processed Frame 5000 (200.00s). Active tracks: 0
+2026-09-10 19:16:26,695 [INFO] main: Processed Frame 5100 (204.00s). Active tracks: 0
+2026-09-10 19:16:35,024 [INFO] main: Processed Frame 5200 (208.00s). Active tracks: 0
+2026-09-10 19:16:43,554 [INFO] main: Processed Frame 5300 (212.00s). Active tracks: 0
+2026-09-10 19:16:51,926 [INFO] main: Processed Frame 5400 (216.00s). Active tracks: 0
+2026-09-10 19:17:00,475 [INFO] main: Processed Frame 5500 (220.00s). Active tracks: 0
+2026-09-10 19:17:09,429 [INFO] main: Processed Frame 5600 (224.00s). Active tracks: 0
+2026-09-10 19:17:17,941 [INFO] main: Processed Frame 5700 (228.00s). Active tracks: 0
+2026-09-10 19:17:26,393 [INFO] main: Processed Frame 5800 (232.00s). Active tracks: 0
+2026-09-10 19:17:34,882 [INFO] main: Processed Frame 5900 (236.00s). Active tracks: 0
+2026-09-10 19:17:43,368 [INFO] main: Processed Frame 6000 (240.00s). Active tracks: 0
+2026-09-10 19:17:51,778 [INFO] main: Processed Frame 6100 (244.00s). Active tracks: 0
+2026-09-10 19:18:00,251 [INFO] main: Processed Frame 6200 (248.00s). Active tracks: 0
+2026-09-10 19:18:08,774 [INFO] main: Processed Frame 6300 (252.00s). Active tracks: 0
+2026-09-10 19:18:17,671 [INFO] main: Processed Frame 6400 (256.00s). Active tracks: 0
+2026-09-10 19:18:26,390 [INFO] main: Processed Frame 6500 (260.00s). Active tracks: 0
+2026-09-10 19:18:34,599 [INFO] main: Processed Frame 6600 (264.00s). Active tracks: 0
+2026-09-10 19:18:42,990 [INFO] main: Processed Frame 6700 (268.00s). Active tracks: 0
+2026-09-10 19:18:51,868 [INFO] main: Processed Frame 6800 (272.00s). Active tracks: 0
+2026-09-10 19:19:00,372 [INFO] main: Processed Frame 6900 (276.00s). Active tracks: 0
+2026-09-10 19:19:09,543 [INFO] main: Processed Frame 7000 (280.00s). Active tracks: 0
+2026-09-10 19:19:18,459 [INFO] main: Processed Frame 7100 (284.00s). Active tracks: 1
+2026-09-10 19:19:19,356 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 46
+2026-09-10 19:19:19,356 [INFO] vlm_analyzer: Triggering VLM analysis for Event e50e5983-be57-45a7-910f-39512f73bf8d
+2026-09-10 19:19:19,367 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:19:20,453 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Ceus8uuJuBCiqhYjazbwU"}
+2026-09-10 19:19:20,463 [INFO] vlm_analyzer: Saved 15 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:19:28,962 [INFO] main: Processed Frame 7200 (288.00s). Active tracks: 1
+2026-09-10 19:19:38,122 [INFO] main: Processed Frame 7300 (292.00s). Active tracks: 1
+2026-09-10 19:19:47,279 [INFO] main: Processed Frame 7400 (296.00s). Active tracks: 1
+2026-09-10 19:19:56,618 [INFO] main: Processed Frame 7500 (300.00s). Active tracks: 1
+2026-09-10 19:20:06,147 [INFO] main: Processed Frame 7600 (304.00s). Active tracks: 1
+2026-09-10 19:20:14,794 [INFO] main: Processed Frame 7700 (308.00s). Active tracks: 0
+2026-09-10 19:20:23,295 [INFO] main: Processed Frame 7800 (312.00s). Active tracks: 0
+2026-09-10 19:20:31,931 [INFO] main: Processed Frame 7900 (316.00s). Active tracks: 0
+2026-09-10 19:20:40,519 [INFO] main: Processed Frame 8000 (320.00s). Active tracks: 0
+2026-09-10 19:20:48,938 [INFO] main: Processed Frame 8100 (324.00s). Active tracks: 0
+2026-09-10 19:20:57,296 [INFO] main: Processed Frame 8200 (328.00s). Active tracks: 0
+2026-09-10 19:21:05,824 [INFO] main: Processed Frame 8300 (332.00s). Active tracks: 0
+2026-09-10 19:21:14,231 [INFO] main: Processed Frame 8400 (336.00s). Active tracks: 0
+2026-09-10 19:21:23,297 [INFO] main: Processed Frame 8500 (340.00s). Active tracks: 0
+2026-09-10 19:21:32,472 [INFO] main: Processed Frame 8600 (344.00s). Active tracks: 0
+2026-09-10 19:21:40,848 [INFO] main: Processed Frame 8700 (348.00s). Active tracks: 0
+2026-09-10 19:21:49,014 [INFO] main: Processed Frame 8800 (352.00s). Active tracks: 0
+2026-09-10 19:21:57,564 [INFO] main: Processed Frame 8900 (356.00s). Active tracks: 0
+2026-09-10 19:22:05,897 [INFO] main: Processed Frame 9000 (360.00s). Active tracks: 0
+2026-09-10 19:22:14,174 [INFO] main: Processed Frame 9100 (364.00s). Active tracks: 0
+2026-09-10 19:22:22,707 [INFO] main: Processed Frame 9200 (368.00s). Active tracks: 0
+2026-09-10 19:22:31,265 [INFO] main: Processed Frame 9300 (372.00s). Active tracks: 0
+2026-09-10 19:22:41,047 [INFO] main: Processed Frame 9400 (376.00s). Active tracks: 0
+2026-09-10 19:22:50,823 [INFO] main: Processed Frame 9500 (380.00s). Active tracks: 0
+2026-09-10 19:22:59,397 [INFO] main: Processed Frame 9600 (384.00s). Active tracks: 0
+2026-09-10 19:23:07,835 [INFO] main: Processed Frame 9700 (388.00s). Active tracks: 0
+2026-09-10 19:23:16,375 [INFO] main: Processed Frame 9800 (392.00s). Active tracks: 0
+2026-09-10 19:23:24,629 [INFO] main: Processed Frame 9900 (396.00s). Active tracks: 0
+2026-09-10 19:23:33,432 [INFO] main: Processed Frame 10000 (400.00s). Active tracks: 0
+2026-09-10 19:23:42,600 [INFO] main: Processed Frame 10100 (404.00s). Active tracks: 0
+2026-09-10 19:23:50,275 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 51
+2026-09-10 19:23:50,276 [INFO] vlm_analyzer: Triggering VLM analysis for Event b3c9451f-5c21-48f5-b1b1-716038ed0427
+2026-09-10 19:23:50,286 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 19:23:51,640 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeusUuJ9cxEAqCHX4aJwd"}
+2026-09-10 19:23:51,645 [INFO] vlm_analyzer: Saved 16 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 19:23:54,111 [INFO] main: Processed Frame 10200 (408.00s). Active tracks: 1
+2026-09-10 19:24:03,271 [INFO] main: Processed Frame 10300 (412.00s). Active tracks: 1
+2026-09-10 19:24:12,430 [INFO] main: Processed Frame 10400 (416.00s). Active tracks: 2
+2026-09-10 19:24:21,494 [INFO] main: Processed Frame 10500 (420.00s). Active tracks: 1
+2026-09-10 19:24:29,971 [INFO] main: Processed Frame 10600 (424.00s). Active tracks: 0
+2026-09-10 19:24:38,956 [INFO] main: Processed Frame 10700 (428.00s). Active tracks: 0
+2026-09-10 19:24:47,625 [INFO] main: Processed Frame 10800 (432.00s). Active tracks: 0
+2026-09-10 19:24:54,498 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 19:24:54,710 [INFO] event_engine: Saved 16 events to JSON and CSV.
+2026-09-10 19:24:54,710 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 19:24:54,711 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 20:51:22,417 [INFO] pipeline_runner: Pipeline thread started for video: D:\VLM\VLM_Surveillance_Project\videos\uploaded_aactv.mp4
+2026-09-10 20:51:22,422 [INFO] main: Initializing Subsystems...
+2026-09-10 20:51:22,576 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 20:51:22,577 [INFO] main: Subsystem initialization complete.
+2026-09-10 20:51:22,577 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\uploaded_aactv.mp4
+2026-09-10 20:51:30,330 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 1
+2026-09-10 20:51:30,331 [INFO] vlm_analyzer: Triggering VLM analysis for Event 08f25e30-e273-49ad-9efa-a792c579736d
+2026-09-10 20:51:30,338 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 20:51:31,269 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeuzAcrkZcqQPgSz55pof"}
+2026-09-10 20:51:31,273 [INFO] vlm_analyzer: Saved 17 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 20:51:31,463 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 2
+2026-09-10 20:51:31,464 [INFO] vlm_analyzer: Triggering VLM analysis for Event fc6ff3be-510c-4694-91a0-a33f561cbc5a
+2026-09-10 20:51:31,470 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 20:51:32,381 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeuzAhRLbT5o12RKDKjNk"}
+2026-09-10 20:51:32,384 [INFO] vlm_analyzer: Saved 18 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 20:51:33,173 [INFO] main: Processed Frame 100 (4.00s). Active tracks: 2
+2026-09-10 20:51:41,177 [INFO] main: Processed Frame 200 (8.00s). Active tracks: 1
+2026-09-10 20:51:49,492 [INFO] main: Processed Frame 300 (12.00s). Active tracks: 1
+2026-09-10 20:51:54,392 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 7
+2026-09-10 20:51:54,393 [INFO] vlm_analyzer: Triggering VLM analysis for Event ab74d758-61c7-4b0c-b09e-0e2990a109ba
+2026-09-10 20:51:54,399 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 20:51:55,552 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeuzCPpV9aeaR4uKTC4Y9"}
+2026-09-10 20:51:55,557 [INFO] vlm_analyzer: Saved 19 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 20:51:58,828 [INFO] main: Processed Frame 400 (16.00s). Active tracks: 2
+2026-09-10 20:52:06,889 [INFO] main: Processed Frame 500 (20.00s). Active tracks: 0
+2026-09-10 20:52:15,628 [INFO] main: Processed Frame 600 (24.00s). Active tracks: 1
+2026-09-10 20:52:16,908 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 15
+2026-09-10 20:52:16,908 [INFO] vlm_analyzer: Triggering VLM analysis for Event 9aafd752-bee5-43de-a5f4-d203bd9d5c6c
+2026-09-10 20:52:16,915 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 20:52:17,713 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeuzE3omdq9tCXXnFLj9z"}
+2026-09-10 20:52:17,717 [INFO] vlm_analyzer: Saved 20 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 20:52:21,746 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 17
+2026-09-10 20:52:21,746 [INFO] vlm_analyzer: Triggering VLM analysis for Event 882b71cf-a5dd-4be5-95c0-c33656085da4
+2026-09-10 20:52:21,752 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 20:52:22,806 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeuzERD8gYJ9Kz5Xi9K4Y"}
+2026-09-10 20:52:22,825 [INFO] vlm_analyzer: Saved 21 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 20:52:26,551 [INFO] main: Processed Frame 700 (28.00s). Active tracks: 3
+2026-09-10 20:52:35,134 [INFO] main: Processed Frame 800 (32.00s). Active tracks: 0
+2026-09-10 20:52:43,055 [INFO] main: Processed Frame 900 (36.00s). Active tracks: 0
+2026-09-10 20:52:51,119 [INFO] main: Processed Frame 1000 (40.00s). Active tracks: 1
+2026-09-10 20:52:58,701 [INFO] main: Processed Frame 1100 (44.00s). Active tracks: 0
+2026-09-10 20:53:06,543 [INFO] main: Processed Frame 1200 (48.00s). Active tracks: 0
+2026-09-10 20:53:14,820 [INFO] main: Processed Frame 1300 (52.00s). Active tracks: 0
+2026-09-10 20:53:24,074 [INFO] main: Processed Frame 1400 (56.00s). Active tracks: 0
+2026-09-10 20:53:33,714 [INFO] main: Processed Frame 1500 (60.00s). Active tracks: 1
+2026-09-10 20:53:35,201 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 26
+2026-09-10 20:53:35,201 [INFO] vlm_analyzer: Triggering VLM analysis for Event e41fb138-6557-40f3-b5fe-2b5555363900
+2026-09-10 20:53:35,208 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 20:53:36,174 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CeuzKq6xP9h41p3rK9QG7"}
+2026-09-10 20:53:36,178 [INFO] vlm_analyzer: Saved 22 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 20:53:44,894 [INFO] main: Processed Frame 1600 (64.00s). Active tracks: 1
+2026-09-10 20:53:55,824 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 20:53:55,892 [INFO] event_engine: Saved 6 events to JSON and CSV.
+2026-09-10 20:53:55,893 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 20:53:55,893 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 21:09:53,000 [INFO] pipeline_runner: Pipeline thread started for video: 0
+2026-09-10 21:09:53,014 [INFO] main: Initializing Subsystems...
+2026-09-10 21:09:53,137 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:09:53,139 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:09:53,140 [INFO] main: Opening video source: 0
+2026-09-10 21:09:53,302 [ERROR] video_reader: Failed to open video file: 0
+2026-09-10 21:09:53,302 [ERROR] main: Failed to open video source.
+2026-09-10 21:09:53,302 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 21:17:23,271 [INFO] pipeline_runner: Pipeline thread started for video: 0
+2026-09-10 21:17:23,278 [INFO] main: Initializing Subsystems...
+2026-09-10 21:17:23,482 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:17:23,484 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:17:23,484 [INFO] main: Opening video source: 0
+2026-09-10 21:17:23,580 [ERROR] video_reader: Failed to open video file: 0
+2026-09-10 21:17:23,581 [ERROR] main: Failed to open video source.
+2026-09-10 21:17:23,581 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 21:22:38,879 [INFO] pipeline_runner: Pipeline thread started for video: 0
+2026-09-10 21:22:38,885 [INFO] main: Initializing Subsystems...
+2026-09-10 21:22:39,039 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:22:39,041 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:22:39,042 [INFO] main: Opening video source: 0
+2026-09-10 21:22:39,112 [ERROR] video_reader: Failed to open video file: 0
+2026-09-10 21:22:39,112 [ERROR] main: Failed to open video source.
+2026-09-10 21:22:39,112 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 21:28:51,080 [INFO] main: Initializing Subsystems...
+2026-09-10 21:28:51,241 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:28:51,244 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:28:51,247 [INFO] main: Opening video source: 0
+2026-09-10 21:28:52,074 [WARNING] video_reader: Invalid FPS (-1.0) detected. Defaulting to 30.
+2026-09-10 21:28:54,824 [ERROR] main: Pipeline crashed: cannot access local variable 'video_source' where it is not associated with a value
+2026-09-10 21:28:54,825 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 21:28:55,395 [INFO] event_engine: Saved 0 events to JSON and CSV.
+2026-09-10 21:28:55,417 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 21:28:55,421 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 21:29:19,731 [INFO] pipeline_runner: Pipeline thread started for video: 0
+2026-09-10 21:29:19,736 [INFO] main: Initializing Subsystems...
+2026-09-10 21:29:19,831 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:29:19,834 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:29:19,835 [INFO] main: Opening video source: 0
+2026-09-10 21:29:20,154 [WARNING] video_reader: Invalid FPS (-1.0) detected. Defaulting to 30.
+2026-09-10 21:29:20,633 [ERROR] main: Pipeline crashed: cannot access local variable 'video_source' where it is not associated with a value
+2026-09-10 21:29:20,633 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 21:29:21,236 [INFO] event_engine: Saved 0 events to JSON and CSV.
+2026-09-10 21:29:21,237 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 21:29:21,237 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 21:31:45,814 [INFO] pipeline_runner: Pipeline thread started for video: 0
+2026-09-10 21:31:45,820 [INFO] main: Initializing Subsystems...
+2026-09-10 21:31:45,910 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:31:45,910 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:31:45,911 [INFO] main: Opening video source: 0
+2026-09-10 21:31:46,271 [WARNING] video_reader: Invalid FPS (-1.0) detected. Defaulting to 30.
+2026-09-10 21:31:46,772 [ERROR] main: Pipeline crashed: cannot access local variable 'video_source' where it is not associated with a value
+2026-09-10 21:31:46,773 [INFO] main: Shutting down pipeline and saving all results...
+2026-09-10 21:31:47,530 [INFO] event_engine: Saved 0 events to JSON and CSV.
+2026-09-10 21:31:47,531 [INFO] main: Shutdown complete. All data saved.
+2026-09-10 21:31:47,531 [INFO] pipeline_runner: Pipeline finished successfully.
+2026-09-10 21:36:26,597 [INFO] main: Initializing Subsystems...
+2026-09-10 21:36:26,670 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:36:26,671 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:36:26,671 [INFO] main: Opening video source: 0
+2026-09-10 21:36:27,524 [WARNING] video_reader: Invalid FPS (-1.0) detected. Defaulting to 30.
+2026-09-10 21:36:42,211 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 1
+2026-09-10 21:36:42,212 [INFO] vlm_analyzer: Triggering VLM analysis for Event 411320c0-f22b-43d4-a07d-6ae823dc0ce0
+2026-09-10 21:36:42,234 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:36:43,479 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev3cXrSnipwmYFTz35i6"}
+2026-09-10 21:36:43,484 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 1):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:36:43,486 [INFO] vlm_analyzer: Saved 23 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:36:50,054 [INFO] main: Processed Frame 100 (3.33s). Active tracks: 2
+2026-09-10 21:36:50,496 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 4
+2026-09-10 21:36:50,507 [INFO] vlm_analyzer: Triggering VLM analysis for Event e43384ee-f07d-4b6c-801a-4bde191f017f
+2026-09-10 21:36:50,517 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:36:51,449 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev3d8igX94VG9Jfz4djo"}
+2026-09-10 21:36:51,450 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 4):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:36:51,452 [INFO] vlm_analyzer: Saved 24 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:37:08,203 [INFO] main: Processed Frame 200 (6.67s). Active tracks: 2
+2026-09-10 21:37:22,763 [INFO] main: Processed Frame 300 (10.00s). Active tracks: 2
+2026-09-10 21:37:28,872 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 4
+2026-09-10 21:37:28,872 [INFO] vlm_analyzer: Triggering VLM analysis for Event 961cda60-f604-4115-8e1f-7dba2a0506d8
+2026-09-10 21:37:28,876 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:37:29,812 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev3fxtB9gjd5unjb3Rfe"}
+2026-09-10 21:37:29,813 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 4):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:37:29,814 [INFO] vlm_analyzer: Saved 25 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:37:38,366 [INFO] main: Processed Frame 400 (13.33s). Active tracks: 2
+2026-09-10 21:37:42,788 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 5
+2026-09-10 21:37:42,788 [INFO] vlm_analyzer: Triggering VLM analysis for Event 2741958d-865e-4d0d-9cb7-5b5932fe73b1
+2026-09-10 21:37:42,792 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:37:43,575 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev3gz49hMBbr9pbVXNEQ"}
+2026-09-10 21:37:43,576 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 5):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:37:43,578 [INFO] vlm_analyzer: Saved 26 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:37:54,367 [INFO] main: Processed Frame 500 (16.67s). Active tracks: 3
+2026-09-10 21:38:01,685 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 6
+2026-09-10 21:38:01,685 [INFO] vlm_analyzer: Triggering VLM analysis for Event 9903df04-8f9e-493a-b5cb-42d28b409d5f
+2026-09-10 21:38:01,689 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:38:02,508 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev3iNzZMFu5u1HeeDWLG"}
+2026-09-10 21:38:02,511 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 6):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:38:02,512 [INFO] vlm_analyzer: Saved 27 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:38:11,246 [INFO] main: Processed Frame 600 (20.00s). Active tracks: 2
+2026-09-10 21:38:27,404 [INFO] main: Processed Frame 700 (23.33s). Active tracks: 2
+2026-09-10 21:38:30,592 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 11
+2026-09-10 21:38:30,594 [INFO] vlm_analyzer: Triggering VLM analysis for Event cd649fe7-771c-4753-9c05-2f4067728be4
+2026-09-10 21:38:30,599 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:38:31,686 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev3kWofaFqjuH7fojyKs"}
+2026-09-10 21:38:31,689 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 11):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:38:31,694 [INFO] vlm_analyzer: Saved 28 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:38:44,242 [INFO] main: Processed Frame 800 (26.67s). Active tracks: 2
+2026-09-10 21:38:58,736 [INFO] main: Processed Frame 900 (30.00s). Active tracks: 2
+2026-09-10 21:39:08,772 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 11
+2026-09-10 21:39:08,772 [INFO] vlm_analyzer: Triggering VLM analysis for Event 93cad91e-10be-46cc-b642-58803864daf3
+2026-09-10 21:39:08,778 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:39:09,704 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev3oKqSs4QsGRARnaXuv"}
+2026-09-10 21:39:09,705 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 11):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:39:09,706 [INFO] vlm_analyzer: Saved 29 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:39:16,775 [INFO] main: Processed Frame 1000 (33.33s). Active tracks: 2
+2026-09-10 21:39:31,165 [INFO] main: Processed Frame 1100 (36.67s). Active tracks: 2
+2026-09-10 21:39:45,914 [INFO] main: Processed Frame 1200 (40.00s). Active tracks: 2
+2026-09-10 21:39:53,122 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 13
+2026-09-10 21:39:53,123 [INFO] vlm_analyzer: Triggering VLM analysis for Event 15bf9528-7ef5-452a-b996-c85d6d1e27ea
+2026-09-10 21:39:53,126 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:48:42,574 [INFO] main: Initializing Subsystems...
+2026-09-10 21:48:42,656 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:48:42,658 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:48:42,662 [INFO] main: Opening video source: 0
+2026-09-10 21:48:43,485 [WARNING] video_reader: Invalid FPS (-1.0) detected. Defaulting to 30.
+2026-09-10 21:48:56,629 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 1
+2026-09-10 21:48:56,629 [INFO] vlm_analyzer: Triggering VLM analysis for Event d82de423-2dc4-43bd-a898-60a43d370b95
+2026-09-10 21:48:56,643 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:48:57,656 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4YfRN4NPYajNsAu5ZA"}
+2026-09-10 21:48:57,657 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 1):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:48:57,658 [INFO] vlm_analyzer: Saved 30 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:49:17,730 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 2
+2026-09-10 21:49:17,731 [INFO] vlm_analyzer: Triggering VLM analysis for Event fb4fac22-f99d-46db-be33-c5f5a12be4f2
+2026-09-10 21:49:17,736 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:49:18,866 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4aE6RBvMABiQLbLfob"}
+2026-09-10 21:49:18,867 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 2):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:49:18,868 [INFO] vlm_analyzer: Saved 31 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:49:27,024 [INFO] main: Processed Frame 300 (10.00s). Active tracks: 2
+2026-09-10 21:49:55,451 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 2
+2026-09-10 21:49:55,451 [INFO] vlm_analyzer: Triggering VLM analysis for Event 8cc9f8db-9a0b-4a3e-a219-62f8b50979b3
+2026-09-10 21:49:55,458 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:49:56,526 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4d1XwyP1yUZmHTdhpD"}
+2026-09-10 21:49:56,528 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 2):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:49:56,531 [INFO] vlm_analyzer: Saved 32 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:50:01,606 [INFO] main: Processed Frame 600 (20.00s). Active tracks: 2
+2026-09-10 21:50:22,932 [INFO] main: Processed Frame 900 (30.00s). Active tracks: 2
+2026-09-10 21:50:31,992 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 4
+2026-09-10 21:50:31,992 [INFO] vlm_analyzer: Triggering VLM analysis for Event c77873bf-8b27-4677-a8ca-458e945924db
+2026-09-10 21:50:31,997 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:50:34,019 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4fmMFishVjc1KPsE1W"}
+2026-09-10 21:50:34,021 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 4):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:50:34,028 [INFO] vlm_analyzer: Saved 33 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:50:46,747 [INFO] main: Processed Frame 1200 (40.00s). Active tracks: 3
+2026-09-10 21:51:09,060 [INFO] main: Processed Frame 1500 (50.00s). Active tracks: 3
+2026-09-10 21:51:33,272 [INFO] main: Processed Frame 1800 (60.00s). Active tracks: 3
+2026-09-10 21:51:53,653 [INFO] main: Processed Frame 2100 (70.00s). Active tracks: 2
+2026-09-10 21:52:16,677 [INFO] main: Processed Frame 2400 (80.00s). Active tracks: 2
+2026-09-10 21:52:37,899 [INFO] main: Processed Frame 2700 (90.00s). Active tracks: 2
+2026-09-10 21:52:59,878 [INFO] main: Processed Frame 3000 (100.00s). Active tracks: 2
+2026-09-10 21:53:20,226 [INFO] main: Processed Frame 3300 (110.00s). Active tracks: 2
+2026-09-10 21:53:34,026 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 9
+2026-09-10 21:53:34,026 [INFO] vlm_analyzer: Triggering VLM analysis for Event f5ae9a0f-f5e3-478e-9d14-df442f1cd5cd
+2026-09-10 21:53:34,036 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:53:34,930 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4u7KfCGkskBDaC5uy4"}
+2026-09-10 21:53:34,934 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 9):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:53:34,935 [INFO] vlm_analyzer: Saved 34 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:53:34,935 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 10
+2026-09-10 21:53:34,936 [INFO] vlm_analyzer: Triggering VLM analysis for Event 8356083d-3109-4c10-98a0-d5f57016ca77
+2026-09-10 21:53:34,939 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:53:35,884 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4uAj3KrPghMtZcyk93"}
+2026-09-10 21:53:35,885 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 10):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:53:35,886 [INFO] vlm_analyzer: Saved 35 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:53:48,303 [INFO] main: Processed Frame 3600 (120.00s). Active tracks: 4
+2026-09-10 21:54:00,618 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 9
+2026-09-10 21:54:00,619 [INFO] vlm_analyzer: Triggering VLM analysis for Event 2f173169-c9d8-47b2-801f-385174e0b1eb
+2026-09-10 21:54:00,625 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:54:01,735 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4w5cXC4T17hpPn7AGR"}
+2026-09-10 21:54:01,737 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 9):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:54:01,738 [INFO] vlm_analyzer: Saved 36 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:54:01,738 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 10
+2026-09-10 21:54:01,739 [INFO] vlm_analyzer: Triggering VLM analysis for Event b9c70690-8f7f-4259-87db-3a66595a4816
+2026-09-10 21:54:01,744 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:54:02,675 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev4wA69iqEXu8d6W8wL9"}
+2026-09-10 21:54:02,676 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 10):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:54:02,677 [INFO] vlm_analyzer: Saved 37 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:54:21,308 [INFO] main: Processed Frame 3900 (130.00s). Active tracks: 4
+2026-09-10 21:54:52,189 [INFO] main: Processed Frame 4200 (140.00s). Active tracks: 4
+2026-09-10 21:55:22,957 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 11
+2026-09-10 21:55:22,957 [INFO] vlm_analyzer: Triggering VLM analysis for Event aa4c94db-cbda-48d5-865c-e2da31686e40
+2026-09-10 21:55:22,961 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:55:24,146 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev538pRFHw9UooRNz2qY"}
+2026-09-10 21:55:24,149 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 11):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:55:24,152 [INFO] vlm_analyzer: Saved 38 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:55:24,200 [INFO] main: Processed Frame 4500 (150.00s). Active tracks: 4
+2026-09-10 21:55:26,114 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 12
+2026-09-10 21:55:26,116 [INFO] vlm_analyzer: Triggering VLM analysis for Event bdc6ed0b-bf34-42a2-aa8f-dd599281c920
+2026-09-10 21:55:26,123 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:55:26,967 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev53NDaF6DApYK69Med6"}
+2026-09-10 21:55:26,969 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 12):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:55:26,970 [INFO] vlm_analyzer: Saved 39 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:55:45,422 [INFO] main: Processed Frame 4800 (160.00s). Active tracks: 4
+2026-09-10 21:55:51,482 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 11
+2026-09-10 21:55:51,482 [INFO] vlm_analyzer: Triggering VLM analysis for Event 622b90b9-3e05-4453-a549-46efe399dc57
+2026-09-10 21:55:51,486 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:55:52,343 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev55EpstGQbkTpvFBtBG"}
+2026-09-10 21:55:52,344 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 11):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:55:52,346 [INFO] vlm_analyzer: Saved 40 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:56:01,410 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 14
+2026-09-10 21:56:01,411 [INFO] vlm_analyzer: Triggering VLM analysis for Event 7ade5a12-5b46-45f3-8162-d81e7c4dce4d
+2026-09-10 21:56:01,414 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:56:02,277 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev55yF33BHbbZuGWjdpY"}
+2026-09-10 21:56:02,278 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 14):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:56:02,279 [INFO] vlm_analyzer: Saved 41 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:56:09,705 [INFO] main: Processed Frame 5100 (170.00s). Active tracks: 6
+2026-09-10 21:56:11,840 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 15
+2026-09-10 21:56:11,840 [INFO] vlm_analyzer: Triggering VLM analysis for Event 27535bc6-9922-4fc0-90c8-560fc594d251
+2026-09-10 21:56:11,845 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:56:12,817 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev56kRPgZfC7DQ4nZmpp"}
+2026-09-10 21:56:12,818 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 15):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:56:12,822 [INFO] vlm_analyzer: Saved 42 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:56:19,982 [ERROR] base_events: Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-10 21:56:32,194 [INFO] main: Processed Frame 5400 (180.00s). Active tracks: 6
+2026-09-10 21:56:42,928 [INFO] pipeline_runner: Pipeline thread started for video: 0
+2026-09-10 21:56:42,936 [INFO] main: Initializing Subsystems...
+2026-09-10 21:56:43,094 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-10 21:56:43,095 [INFO] main: Subsystem initialization complete.
+2026-09-10 21:56:43,095 [WARNING] pipeline_runner: Failed to delete old output video: [WinError 32] The process cannot access the file because it is being used by another process: 'D:\\VLM\\VLM_Surveillance_Project\\outputs\\detections\\tracking_annotated.webm'
+2026-09-10 21:56:43,095 [INFO] main: Opening video source: 0
+2026-09-10 21:56:43,110 [WARNING] video_reader: Invalid FPS (-1.0) detected. Defaulting to 30.
+2026-09-10 21:56:53,209 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 1
+2026-09-10 21:56:53,210 [INFO] vlm_analyzer: Triggering VLM analysis for Event cb763f05-9a3f-4e76-b090-c834e5083aa4
+2026-09-10 21:56:53,216 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:56:54,186 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev59o7TBmkk3BbYxpoMZ"}
+2026-09-10 21:56:54,188 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 1):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:56:54,191 [INFO] vlm_analyzer: Saved 43 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:56:54,191 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 2
+2026-09-10 21:56:54,191 [INFO] vlm_analyzer: Triggering VLM analysis for Event 119bea65-04ac-425f-b52a-2917cdc6b81f
+2026-09-10 21:56:54,196 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:56:55,237 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev59s6KJ8G9MGtnxUZHh"}
+2026-09-10 21:56:55,240 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 2):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:56:55,242 [INFO] vlm_analyzer: Saved 44 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:57:02,613 [INFO] main: Processed Frame 5700 (190.00s). Active tracks: 4
+2026-09-10 21:57:23,063 [INFO] main: Processed Frame 300 (10.00s). Active tracks: 2
+2026-09-10 21:57:29,429 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 1
+2026-09-10 21:57:29,429 [INFO] vlm_analyzer: Triggering VLM analysis for Event 6b1b8410-3c59-479e-a8a5-8f5c450a7fca
+2026-09-10 21:57:29,437 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:57:30,479 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev5CTsPnYehdmqgVRgps"}
+2026-09-10 21:57:30,483 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 1):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:57:30,486 [INFO] vlm_analyzer: Saved 45 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-10 21:57:39,061 [INFO] main: Processed Frame 6000 (200.00s). Active tracks: 2
+2026-09-10 21:57:56,434 [INFO] main: Processed Frame 600 (20.00s). Active tracks: 2
+2026-09-10 21:58:05,307 [ERROR] base_events: Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-10 21:58:06,451 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 2
+2026-09-10 21:58:06,452 [INFO] vlm_analyzer: Triggering VLM analysis for Event 7f034995-0347-4000-ba2e-c73ab3529419
+2026-09-10 21:58:06,457 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-10 21:58:07,423 [ERROR] opus_model: Anthropic API error: 400 - {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011Cev5FCJrWVQMcuYYS5wNx"}
+2026-09-10 21:58:07,425 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 2):
+Error: API returned status code 400
+==================================================
+2026-09-10 21:58:07,427 [INFO] vlm_analyzer: Saved 46 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-11 01:14:17,650 [INFO] main: Initializing Subsystems...
+2026-09-11 01:14:17,814 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-11 01:14:18,099 [INFO] main: Subsystem initialization complete.
+2026-09-11 01:14:18,103 [INFO] main: Opening video source: 0
+2026-09-11 01:14:18,994 [WARNING] video_reader: Invalid FPS (-1.0) detected. Defaulting to 30.
+2026-09-11 01:14:31,599 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: human_activity_detected for Track ID 1
+2026-09-11 01:14:31,599 [INFO] vlm_analyzer: Triggering VLM analysis for Event cbbbf443-2fa7-4e07-8529-5582e5fbebcb
+2026-09-11 01:14:31,633 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-11 01:14:32,420 [ERROR] opus_model: Anthropic API error: 401 - {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CevLDw72374G1NkUsvF7t"}
+2026-09-11 01:14:32,422 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 1):
+Error: API returned status code 401
+==================================================
+2026-09-11 01:14:32,423 [INFO] vlm_analyzer: Saved 47 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-11 01:15:00,322 [INFO] main: Processed Frame 300 (10.00s). Active tracks: 1
+2026-09-11 01:15:04,254 [WARNING] event_engine: SUSPICIOUS EVENT DETECTED: stationary_person for Track ID 1
+2026-09-11 01:15:04,254 [INFO] vlm_analyzer: Triggering VLM analysis for Event 956a0231-afa7-4be9-a5d6-4416e44cd59f
+2026-09-11 01:15:04,258 [INFO] opus_model: Sending request to Anthropic API...
+2026-09-11 01:15:04,903 [ERROR] opus_model: Anthropic API error: 401 - {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CevLGKzV1hgpPzvpYSZvg"}
+2026-09-11 01:15:04,905 [INFO] vlm_analyzer: 
+==================================================
+[VLM ANALYSIS] (Track 1):
+Error: API returned status code 401
+==================================================
+2026-09-11 01:15:04,906 [INFO] vlm_analyzer: Saved 48 VLM analyses to D:\VLM\VLM_Surveillance_Project\outputs\alerts\vlm_analysis.json
+2026-09-11 01:40:47,802 [INFO] main: Initializing Subsystems...
+2026-09-11 01:40:47,924 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-11 01:40:47,926 [INFO] main: Subsystem initialization complete.
+2026-09-11 01:40:47,928 [INFO] main: Opening video source: 0
+2026-09-11 01:40:48,321 [WARNING] video_reader: Invalid FPS (0.0) detected. Defaulting to 30.
+2026-09-11 01:44:26,292 [INFO] pipeline_runner: Pipeline thread started for video: 0
+2026-09-11 01:44:26,299 [INFO] main: Initializing Subsystems...
+2026-09-11 01:44:26,482 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-11 01:44:26,486 [INFO] main: Subsystem initialization complete.
+2026-09-11 01:44:26,487 [WARNING] pipeline_runner: Failed to delete old output video: [WinError 32] The process cannot access the file because it is being used by another process: 'D:\\VLM\\VLM_Surveillance_Project\\outputs\\detections\\tracking_annotated.webm'
+2026-09-11 01:44:26,488 [INFO] main: Opening video source: 0
+2026-09-11 01:44:26,493 [WARNING] video_reader: Invalid FPS (0.0) detected. Defaulting to 30.
+2026-09-11 20:55:16,332 [INFO] main: Initializing Subsystems...
+2026-09-11 20:55:16,396 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-11 20:55:16,398 [INFO] main: Subsystem initialization complete.
+2026-09-11 20:55:16,398 [INFO] server: Starting background surveillance pipeline...
+2026-09-11 20:55:16,398 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-11 20:55:16,838 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-11 20:55:16,838 [ERROR] main: Failed to open video source.
+2026-09-11 22:12:01,691 [ERROR] main: Failed to import required modules: No module named 'L1.video_reader'
+2026-09-11 22:20:27,929 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-11 22:20:27,936 [INFO] main: Initializing Subsystems...
+2026-09-11 22:20:29,654 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-11 22:20:29,657 [INFO] main: Subsystem initialization complete.
+2026-09-11 22:20:29,657 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-11 22:20:29,657 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-11 22:20:30,593 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-11 22:20:30,594 [ERROR] main: Failed to open video source.
+2026-09-11 22:45:35,290 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-11 22:45:35,297 [INFO] main: Initializing Subsystems...
+2026-09-11 22:45:35,392 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-11 22:45:35,394 [INFO] main: Subsystem initialization complete.
+2026-09-11 22:45:35,394 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-11 22:45:35,394 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-11 22:45:35,932 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-11 22:45:35,933 [ERROR] main: Failed to open video source.
+2026-09-12 00:20:46,754 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-12 00:20:46,759 [INFO] main: Initializing Subsystems...
+2026-09-12 00:20:46,773 [INFO] core: Disconnected from database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-12 18:34:23,743 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-12 18:34:23,749 [INFO] main: Initializing Subsystems...
+2026-09-12 18:34:23,798 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-12 18:34:25,960 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-12 18:34:25,961 [INFO] main: Subsystem initialization complete.
+2026-09-12 18:34:25,961 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-12 18:34:25,962 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-12 18:34:28,086 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-12 18:34:28,087 [ERROR] main: Failed to open video source.
+2026-09-12 18:49:12,041 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-12 18:49:12,047 [INFO] main: Initializing Subsystems...
+2026-09-12 18:49:12,107 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-12 18:49:15,728 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-12 18:49:15,731 [INFO] main: Subsystem initialization complete.
+2026-09-12 18:49:15,731 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-12 18:49:15,731 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-12 18:49:16,510 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-12 18:49:16,510 [ERROR] main: Failed to open video source.
+2026-09-12 19:45:08,255 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-12 19:45:08,261 [INFO] main: Initializing Subsystems...
+2026-09-12 19:45:08,323 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-12 19:45:12,709 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-12 19:45:12,712 [INFO] main: Subsystem initialization complete.
+2026-09-12 19:45:12,712 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-12 19:45:12,712 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-12 19:45:13,330 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-12 19:45:13,330 [ERROR] main: Failed to open video source.
+2026-09-14 04:34:28,371 [ERROR] main: Failed to import required modules: DLL load failed while importing _openmp_helpers: An Application Control policy has blocked this file.
+2026-09-14 04:37:39,881 [ERROR] main: Failed to import required modules: DLL load failed while importing _openmp_helpers: An Application Control policy has blocked this file.
+2026-09-14 04:41:10,413 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-14 04:41:10,420 [INFO] main: Initializing Subsystems...
+2026-09-14 04:41:10,493 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-14 04:41:18,180 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-14 04:41:18,381 [INFO] vehicle_classifier: Loaded vehicle classifier with classes: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-14 04:41:18,382 [INFO] main: Vehicle Classifier initialized.
+2026-09-14 04:41:18,382 [INFO] main: Subsystem initialization complete.
+2026-09-14 04:41:18,382 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-14 04:41:18,382 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 04:41:19,119 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 04:41:19,119 [ERROR] main: Failed to open video source.
+2026-09-14 04:55:19,700 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-14 04:55:19,708 [INFO] main: Initializing Subsystems...
+2026-09-14 04:55:20,090 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-14 04:55:24,337 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-14 04:55:24,548 [INFO] vehicle_classifier: Loaded vehicle classifier with classes: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-14 04:55:24,548 [INFO] main: Vehicle Classifier initialized.
+2026-09-14 04:55:24,548 [INFO] main: Subsystem initialization complete.
+2026-09-14 04:55:24,548 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-14 04:55:24,548 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 04:55:25,321 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 04:55:25,321 [ERROR] main: Failed to open video source.
+2026-09-14 05:18:18,664 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-14 05:18:18,673 [INFO] main: Initializing Subsystems...
+2026-09-14 05:18:18,754 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-14 05:18:21,977 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-14 05:18:22,187 [INFO] vehicle_classifier: Loaded vehicle classifier with classes: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-14 05:18:22,188 [INFO] main: Vehicle Classifier initialized.
+2026-09-14 05:18:22,188 [INFO] main: Subsystem initialization complete.
+2026-09-14 05:18:22,188 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-14 05:18:22,188 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 05:18:22,850 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 05:18:22,850 [ERROR] main: Failed to open video source.
+2026-09-14 05:33:02,813 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-14 05:33:02,819 [INFO] main: Initializing Subsystems...
+2026-09-14 05:33:02,895 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-14 05:33:05,022 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-14 05:33:05,153 [INFO] vehicle_classifier: Loaded vehicle classifier with classes: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-14 05:33:05,154 [INFO] main: Vehicle Classifier initialized.
+2026-09-14 05:33:05,154 [INFO] main: Subsystem initialization complete.
+2026-09-14 05:33:05,154 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-14 05:33:05,154 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 05:33:05,241 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 05:33:05,241 [ERROR] main: Failed to open video source.
+2026-09-14 20:58:25,835 [INFO] main: Initializing Subsystems...
+2026-09-14 20:58:25,912 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-14 20:58:26,027 [INFO] vehicle_classifier: Loaded top-level classifier: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-14 20:58:26,133 [INFO] vehicle_classifier: Loaded subtype classifier: {'0': 'Anti-aircraft', '1': 'Armored combat support vehicles', '2': 'Armored personnel carriers', '3': 'Infantry fighting vehicles', '4': 'Light armored vehicles', '5': 'Mine-protected vehicles', '6': 'Prime movers and trucks', '7': 'Self-propelled artillery', '8': 'Light utility vehicles', '9': 'Tanks'}
+2026-09-14 20:58:26,133 [INFO] main: Vehicle Classifier initialized.
+2026-09-14 20:58:26,134 [INFO] main: Subsystem initialization complete.
+2026-09-14 20:58:26,134 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 20:58:26,630 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-14 20:58:26,630 [ERROR] main: Failed to open video source.
+2026-09-15 14:27:59,915 [ERROR] main: Failed to import required modules: Could not import module 'Qwen2_5_VLForConditionalGeneration'. Are this object's requirements defined correctly?
+2026-09-15 14:40:13,317 [ERROR] main: Failed to import required modules: DLL load failed while importing _pairwise_fast: An Application Control policy has blocked this file.
+2026-09-15 14:40:13,344 [ERROR] main: Failed to import required modules: DLL load failed while importing _pairwise_fast: An Application Control policy has blocked this file.
+2026-09-15 14:42:21,501 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-15 14:42:21,509 [INFO] main: Initializing Subsystems...
+2026-09-15 14:42:21,581 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-15 14:42:25,248 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-15 14:42:25,453 [INFO] vehicle_classifier: Loaded top-level classifier: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-15 14:42:25,655 [INFO] vehicle_classifier: Loaded subtype classifier: {'0': 'Anti-aircraft', '1': 'Armored combat support vehicles', '2': 'Armored personnel carriers', '3': 'Infantry fighting vehicles', '4': 'Light armored vehicles', '5': 'Mine-protected vehicles', '6': 'Prime movers and trucks', '7': 'Self-propelled artillery', '8': 'Light utility vehicles', '9': 'Tanks'}
+2026-09-15 14:42:25,656 [INFO] main: Vehicle Classifier initialized.
+2026-09-15 14:42:25,656 [INFO] main: Subsystem initialization complete.
+2026-09-15 14:42:25,656 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-15 14:42:25,657 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-15 14:42:26,385 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-15 14:42:26,385 [ERROR] main: Failed to open video source.
+2026-09-15 14:54:07,152 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-15 14:54:07,168 [INFO] main: Initializing Subsystems...
+2026-09-15 14:54:07,173 [INFO] core: Disconnected from database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-16 11:39:59,946 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-16 11:39:59,964 [INFO] main: Initializing Subsystems...
+2026-09-16 11:40:00,149 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-16 11:40:05,205 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-16 11:40:06,902 [INFO] vehicle_classifier: Loaded top-level classifier: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-16 11:40:07,214 [INFO] vehicle_classifier: Loaded subtype classifier: {'0': 'Anti-aircraft', '1': 'Armored combat support vehicles', '2': 'Armored personnel carriers', '3': 'Infantry fighting vehicles', '4': 'Light armored vehicles', '5': 'Mine-protected vehicles', '6': 'Prime movers and trucks', '7': 'Self-propelled artillery', '8': 'Light utility vehicles', '9': 'Tanks'}
+2026-09-16 11:40:07,215 [INFO] main: Vehicle Classifier initialized.
+2026-09-16 11:40:07,216 [INFO] main: Subsystem initialization complete.
+2026-09-16 11:40:07,217 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-16 11:40:07,217 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-16 11:40:08,710 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-16 11:40:08,710 [ERROR] main: Failed to open video source.
+2026-09-16 11:52:57,861 [ERROR] base_events: Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\harsh vardhan\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-09-16 14:28:50,256 [ERROR] main: Failed to import required modules: Could not import module 'Qwen2_5_VLForConditionalGeneration'. Are this object's requirements defined correctly?
+2026-09-16 14:32:59,922 [ERROR] main: Failed to import required modules: Could not import module 'Qwen2_5_VLForConditionalGeneration'. Are this object's requirements defined correctly?
+2026-09-16 14:33:45,650 [ERROR] main: Failed to import required modules: Could not import module 'Qwen2_5_VLForConditionalGeneration'. Are this object's requirements defined correctly?
+2026-09-16 14:36:25,269 [ERROR] main: Failed to import required modules: Could not import module 'Qwen2_5_VLForConditionalGeneration'. Are this object's requirements defined correctly?
+2026-09-16 14:39:26,350 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-16 14:39:26,360 [INFO] main: Initializing Subsystems...
+2026-09-16 14:39:26,542 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-16 14:39:31,367 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-16 14:39:31,589 [INFO] vehicle_classifier: Loaded top-level classifier: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-16 14:39:31,777 [INFO] vehicle_classifier: Loaded subtype classifier: {'0': 'Anti-aircraft', '1': 'Armored combat support vehicles', '2': 'Armored personnel carriers', '3': 'Infantry fighting vehicles', '4': 'Light armored vehicles', '5': 'Mine-protected vehicles', '6': 'Prime movers and trucks', '7': 'Self-propelled artillery', '8': 'Light utility vehicles', '9': 'Tanks'}
+2026-09-16 14:39:31,779 [INFO] main: Vehicle Classifier initialized.
+2026-09-16 14:39:31,781 [INFO] main: Subsystem initialization complete.
+2026-09-16 14:39:31,781 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-16 14:39:31,783 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-16 14:39:35,186 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-16 14:39:35,189 [ERROR] main: Failed to open video source.
+2026-09-16 22:28:25,702 [INFO] core: Connected to database postgresql+asyncpg://ibvap_user:********@localhost:5433/ibvap_db
+2026-09-16 22:28:25,709 [INFO] main: Initializing Subsystems...
+2026-09-16 22:28:25,794 [INFO] anpr: Initializing EasyOCR for ANPR...
+2026-09-16 22:28:28,496 [INFO] opus_model: Initializing OpusVLMWrapper with model claude-3-opus-20240229
+2026-09-16 22:28:28,623 [INFO] vehicle_classifier: Loaded top-level classifier: {'0': 'army_vehicle', '1': 'normal_vehicle'}
+2026-09-16 22:28:28,728 [INFO] vehicle_classifier: Loaded subtype classifier: {'0': 'Anti-aircraft', '1': 'Armored combat support vehicles', '2': 'Armored personnel carriers', '3': 'Infantry fighting vehicles', '4': 'Light armored vehicles', '5': 'Mine-protected vehicles', '6': 'Prime movers and trucks', '7': 'Self-propelled artillery', '8': 'light utility vehicles', '9': 'tanks'}
+2026-09-16 22:28:28,729 [INFO] main: Vehicle Classifier initialized.
+2026-09-16 22:28:28,729 [INFO] main: Subsystem initialization complete.
+2026-09-16 22:28:28,729 [INFO] unified_server: Starting background VLM surveillance pipeline...
+2026-09-16 22:28:28,729 [INFO] main: Opening video source: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-16 22:28:29,210 [ERROR] video_reader: Failed to open video file: D:\VLM\VLM_Surveillance_Project\videos\input.mp4
+2026-09-16 22:28:29,210 [ERROR] main: Failed to open video source.

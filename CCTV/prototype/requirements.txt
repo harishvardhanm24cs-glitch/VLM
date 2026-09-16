@@ -1,0 +1,22 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+databases[asyncpg]==0.9.0
+SQLAlchemy==2.0.30
+asyncpg==0.29.0
+python-multipart==0.0.9
+Pillow==10.3.0
+python-dotenv==1.0.1
+
+# --- Phase 2: Edge AI Pipeline ---
+opencv-python==4.10.0.84
+ultralytics>=8.3.0  # 8.2.x incompatible with PyTorch 2.6+ (weights_only=True default)
+requests==2.32.3
+numpy==1.26.4
+
+# --- Phase 3: Blockchain Audit Trail ---
+psycopg2-binary>=2.9.9
+web3>=7.0.0
+
+# --- Phase 4: IoT Hardware Integration ---
+pyserial>=3.5
+

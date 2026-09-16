@@ -1,0 +1,63 @@
+# Global Configuration File
+# -------------------------
+
+video:
+  source: "videos/input.mp4"
+  # Target FPS for processing (e.g. 10 to reduce load, or 0 for native)
+  processing_fps: 10
+
+vehicle_classifier:
+  enabled: true
+  model_dir: "d:/VLM/models/vehicle_classifier"
+  subtype_model_dir: "d:/VLM/models/military_subtype/v_FULL_20260914_210557"
+  min_confidence: 0.80
+  interval_frames: 5
+  min_observations: 3
+  stability_ratio: 0.67
+
+L1:
+  # L1 Configuration (Frame/Pixel Analysis)
+  enabled: true
+  pixel_difference_threshold: 25
+  frame_skip: 1
+  minimum_change_percentage: 0.1
+
+L2:
+  # L2 Configuration (Object Detection)
+  enabled: true
+  model_path: "yolov8n.pt"
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+  image_size: 640
+  frame_sampling_rate: 1
+  classes_to_detect: [0, 2, 5, 7] # 0: person, 2: car, 5: bus, 7: truck
+
+tracking:
+  # Object Tracking Configuration
+  enabled: true
+  tracker_type: "bytetrack.yaml"
+  tracking_confidence: 0.5
+  maximum_lost_frames: 30
+  frame_sampling: 1
+
+suspicious_activity:
+  # L3 Configuration (Behaviour & Suspicious Activity)
+  enabled: true
+  person_stationary_time: 10
+  vehicle_stationary_time: 120
+  movement_threshold_pixels: 20
+  restricted_zones: []
+
+VLM:
+  # VLM Configuration (Visual Reasoning)
+  enabled: true
+  model_name: "claude-3-opus-20240229"
+  api_key: "apikey_013m83mK3vDndfArdKifjNgk"
+  max_new_tokens: 256
+  temperature: 0.1
+  trigger_on_events: true
+
+L4:
+  # L4 Configuration (Dashboard)
+  enabled: true
+  refresh_rate_seconds: 1

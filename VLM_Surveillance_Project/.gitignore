@@ -1,0 +1,28 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Models (Explicitly requested by user to push)
+# models/yolo/*.pt
+# models/vlm/*
+
+# Outputs and Logs (Explicitly requested)
+# outputs/frames/*
+# outputs/detections/*
+# outputs/alerts/*
+# logs/*.log
+
+# Videos
+# videos/*.mp4
+# videos/*.avi
+# videos/*.mkv
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+opencv-python
+numpy
+ultralytics
+streamlit
+torch
+torchvision
+transformers
+accelerate
+qwen-vl-utils
+pyyaml
+fastapi
+uvicorn
+psycopg2-binary
+python-dotenv
+easyocr

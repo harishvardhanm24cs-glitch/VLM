@@ -1,0 +1,444 @@
+{
+    "d:\\VLM\\gadiya": {
+        "num_images": 0,
+        "num_other": 0,
+        "extensions": [],
+        "subdirs": [
+            "Military",
+            "Normal Indian Vehicle"
+        ]
+    },
+    "Military": {
+        "num_images": 0,
+        "num_other": 0,
+        "extensions": [],
+        "subdirs": [
+            "test",
+            "train",
+            "validation"
+        ]
+    },
+    "Military\\test": {
+        "num_images": 0,
+        "num_other": 0,
+        "extensions": [],
+        "subdirs": [
+            "Anti-aircraft",
+            "Armored combat support vehicles",
+            "Armored personnel carriers",
+            "Infantry fighting vehicles",
+            "Light armored vehicles",
+            "light utility vehicles",
+            "Mine-protected vehicles",
+            "Prime movers and trucks",
+            "Self-propelled artillery",
+            "tanks"
+        ]
+    },
+    "Military\\test\\Anti-aircraft": {
+        "num_images": 337,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\Armored combat support vehicles": {
+        "num_images": 335,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\Armored personnel carriers": {
+        "num_images": 337,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\Infantry fighting vehicles": {
+        "num_images": 338,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\Light armored vehicles": {
+        "num_images": 340,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\light utility vehicles": {
+        "num_images": 345,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\Mine-protected vehicles": {
+        "num_images": 421,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\Prime movers and trucks": {
+        "num_images": 418,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\Self-propelled artillery": {
+        "num_images": 424,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\test\\tanks": {
+        "num_images": 424,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train": {
+        "num_images": 0,
+        "num_other": 0,
+        "extensions": [],
+        "subdirs": [
+            "Anti-aircraft",
+            "Armored combat support vehicles",
+            "Armored personnel carriers",
+            "Infantry fighting vehicles",
+            "Light armored vehicles",
+            "light utility vehicles",
+            "Mine-protected vehicles",
+            "Prime movers and trucks",
+            "Self-propelled artillery",
+            "tanks"
+        ]
+    },
+    "Military\\train\\Anti-aircraft": {
+        "num_images": 942,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\Armored combat support vehicles": {
+        "num_images": 937,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\Armored personnel carriers": {
+        "num_images": 944,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\Infantry fighting vehicles": {
+        "num_images": 947,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\Light armored vehicles": {
+        "num_images": 951,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\light utility vehicles": {
+        "num_images": 967,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\Mine-protected vehicles": {
+        "num_images": 1179,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\Prime movers and trucks": {
+        "num_images": 1170,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\Self-propelled artillery": {
+        "num_images": 1188,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\train\\tanks": {
+        "num_images": 1189,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation": {
+        "num_images": 0,
+        "num_other": 0,
+        "extensions": [],
+        "subdirs": [
+            "Anti-aircraft",
+            "Armored combat support vehicles",
+            "Armored personnel carriers",
+            "Infantry fighting vehicles",
+            "Light armored vehicles",
+            "light utility vehicles",
+            "Mine-protected vehicles",
+            "Prime movers and trucks",
+            "Self-propelled artillery",
+            "tanks"
+        ]
+    },
+    "Military\\validation\\Anti-aircraft": {
+        "num_images": 404,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\Armored combat support vehicles": {
+        "num_images": 401,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\Armored personnel carriers": {
+        "num_images": 405,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\Infantry fighting vehicles": {
+        "num_images": 406,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\Light armored vehicles": {
+        "num_images": 407,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\light utility vehicles": {
+        "num_images": 414,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\Mine-protected vehicles": {
+        "num_images": 506,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\Prime movers and trucks": {
+        "num_images": 502,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\Self-propelled artillery": {
+        "num_images": 509,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Military\\validation\\tanks": {
+        "num_images": 509,
+        "num_other": 0,
+        "extensions": [
+            ".jpeg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle": {
+        "num_images": 0,
+        "num_other": 0,
+        "extensions": [],
+        "subdirs": [
+            "cars",
+            "types of bike",
+            "Vehicle Test Data"
+        ]
+    },
+    "Normal Indian Vehicle\\cars": {
+        "num_images": 100,
+        "num_other": 100,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\types of bike": {
+        "num_images": 0,
+        "num_other": 1,
+        "extensions": [],
+        "subdirs": [
+            "bike"
+        ]
+    },
+    "Normal Indian Vehicle\\types of bike\\bike": {
+        "num_images": 6480,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data": {
+        "num_images": 0,
+        "num_other": 0,
+        "extensions": [],
+        "subdirs": [
+            "Bike",
+            "BUS",
+            "CNG",
+            "Easy-Bike",
+            "Hatchback",
+            "MPV",
+            "Pickup",
+            "Sedan",
+            "SUV",
+            "Truck"
+        ]
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\Bike": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\BUS": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\CNG": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg",
+            ".png"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\Easy-Bike": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\Hatchback": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\MPV": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\Pickup": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\Sedan": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\SUV": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    },
+    "Normal Indian Vehicle\\Vehicle Test Data\\Truck": {
+        "num_images": 10,
+        "num_other": 0,
+        "extensions": [
+            ".jpg"
+        ],
+        "subdirs": []
+    }
+}

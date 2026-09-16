@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IBVAP — Intelligent Border Video Analytics Platform</title>
+  <meta name="description" content="Command & Control Dashboard for real-time border surveillance, anomaly detection, and threat monitoring via AI-powered video analytics." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            surface:   '#0a0e1a',
+            panel:     '#0f1624',
+            card:      '#121b2e',
+            border:    '#1e2d4a',
+            neon:      '#00ff88',
+            neonDim:   '#00c065',
+            amber:     '#ff8c00',
+            amberDim:  '#c46800',
+            red:       '#ff1744',
+            redDim:    '#b71c3c',
+            muted:     '#4a5568',
+            text:      '#cdd6f4',
+            subtext:   '#6c7a95',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'monospace'],
+            mono:    ['JetBrains Mono', 'Fira Code', 'monospace'],
+            body:    ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            neon:   '0 0 12px rgba(0,255,136,0.35), 0 0 40px rgba(0,255,136,0.08)',
+            amber:  '0 0 12px rgba(255,140,0,0.35),  0 0 40px rgba(255,140,0,0.08)',
+            red:    '0 0 12px rgba(255,23,68,0.45),   0 0 40px rgba(255,23,68,0.10)',
+            card:   '0 4px 24px rgba(0,0,0,0.6)',
+          },
+          animation: {
+            'pulse-slow': 'pulse 2.5s cubic-bezier(0.4,0,0.6,1) infinite',
+            'ping-slow':  'ping 2s cubic-bezier(0,0,0.2,1) infinite',
+            'fade-in':    'fadeIn 0.4s ease forwards',
+            'slide-in':   'slideIn 0.35s ease forwards',
+            'flash':      'flash 0.6s ease forwards',
+          },
+          keyframes: {
+            fadeIn:  { '0%': { opacity: '0' },                              '100%': { opacity: '1' } },
+            slideIn: { '0%': { opacity: '0', transform: 'translateY(-16px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+            flash:   { '0%': { boxShadow: '0 0 0 0 rgba(0,255,136,0.8)' }, '100%': { boxShadow: '0 0 0 20px rgba(0,255,136,0)' } },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; overflow: hidden; }
+    body {
+      background-color: #0a0e1a;
+      color: #cdd6f4;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Scanline texture overlay ─────────────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.08) 2px,
+        rgba(0,0,0,0.08) 4px
+      );
+    }
+
+    /* ── Scrollbar ─────────────────────────────────────────────────────────── */
+    ::-webkit-scrollbar        { width: 6px; }
+    ::-webkit-scrollbar-track  { background: #0f1624; }
+    ::-webkit-scrollbar-thumb  { background: #1e2d4a; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #00ff88; }
+
+    /* ── Header glow line ─────────────────────────────────────────────────── */
+    .header-glow {
+      box-shadow: 0 1px 0 #00ff8830, 0 2px 20px #00ff8812;
+    }
+
+    /* ── Stats card glow ring ─────────────────────────────────────────────── */
+    .stat-neon  { border-color: rgba(0,255,136,0.25); box-shadow: inset 0 0 30px rgba(0,255,136,0.04), 0 0 0 1px rgba(0,255,136,0.1); }
+    .stat-amber { border-color: rgba(255,140,0,0.25); box-shadow: inset 0 0 30px rgba(255,140,0,0.04), 0 0 0 1px rgba(255,140,0,0.1); }
+    .stat-red   { border-color: rgba(255,23,68,0.30);  box-shadow: inset 0 0 30px rgba(255,23,68,0.05),  0 0 0 1px rgba(255,23,68,0.12); }
+
+    /* ── Corner brackets ──────────────────────────────────────────────────── */
+    .bracket {
+      position: relative;
+    }
+    .bracket::before, .bracket::after {
+      content: '';
+      position: absolute;
+      width: 10px; height: 10px;
+      border-color: rgba(0,255,136,0.6);
+      border-style: solid;
+    }
+    .bracket::before { top: 0; left: 0;   border-width: 1.5px 0 0 1.5px; }
+    .bracket::after  { bottom: 0; right: 0; border-width: 0 1.5px 1.5px 0; }
+
+    /* ── Alert card new-alert flash ──────────────────────────────────────── */
+    @keyframes newAlert {
+      0%   { box-shadow: 0 0 0 0   rgba(0,255,136,0.9); background-color: rgba(0,255,136,0.08); }
+      60%  { box-shadow: 0 0 0 12px rgba(0,255,136,0);   }
+      100% { background-color: transparent; box-shadow: none; }
+    }
+    .alert-flash { animation: newAlert 0.8s ease forwards; }
+
+    @keyframes newAlertAmber {
+      0%   { box-shadow: 0 0 0 0   rgba(255,140,0,0.9); background-color: rgba(255,140,0,0.08); }
+      60%  { box-shadow: 0 0 0 12px rgba(255,140,0,0);   }
+      100% { background-color: transparent; box-shadow: none; }
+    }
+    .alert-flash-amber { animation: newAlertAmber 0.8s ease forwards; }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .card-enter { animation: slideDown 0.35s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+    /* ── Confidence bar shine ─────────────────────────────────────────────── */
+    .conf-bar {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .conf-bar::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+      transform: translateX(-100%);
+      animation: shimmer 2.5s infinite;
+    }
+    @keyframes shimmer {
+      100% { transform: translateX(100%); }
+    }
+
+    /* ── Pulsing live dot ────────────────────────────────────────────────── */
+    @keyframes livePulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.85); }
+    }
+    .live-dot { animation: livePulse 1.4s ease-in-out infinite; }
+
+    /* ── Grid cells for bounding box preview ─────────────────────────────── */
+    .bb-overlay {
+      position: absolute;
+      border: 1.5px solid;
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    /* ── Threat level meter ───────────────────────────────────────────────── */
+    .threat-low    { color: #00ff88; }
+    .threat-medium { color: #ff8c00; }
+    .threat-high   { color: #ff1744; }
+
+    /* ── Topology grid background ─────────────────────────────────────────── */
+    .topo-grid {
+      background-image:
+        linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* ── Filter button active state ──────────────────────────────────────── */
+    .filter-btn.active {
+      background-color: rgba(0,255,136,0.15);
+      border-color: rgba(0,255,136,0.5);
+      color: #00ff88;
+    }
+    .filter-btn-amber.active {
+      background-color: rgba(255,140,0,0.15);
+      border-color: rgba(255,140,0,0.5);
+      color: #ff8c00;
+    }
+
+    /* ── Snapshot image aspect-ratio container ────────────────────────────── */
+    .snap-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      overflow: hidden;
+      background: #080c14;
+    }
+    .snap-container img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Scrollable feed ─────────────────────────────────────────────────── */
+    #alert-feed {
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    /* ── Empty state ────────────────────────────────────────────────────────*/
+    #empty-state { transition: opacity 0.3s ease; }
+
+    /* ── Connection indicator blink ─────────────────────────────────────── */
+    @keyframes connBlink {
+      0%, 100% { opacity:1; } 50% { opacity:0.3; }
+    }
+    .conn-error { animation: connBlink 1s ease-in-out infinite; }
+
+    /* ── Toast notification ──────────────────────────────────────────────── */
+    @keyframes toastIn  { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes toastOut { from { transform: translateY(0); opacity: 1; }   to { transform: translateY(100%); opacity: 0; } }
+    .toast-enter { animation: toastIn  0.3s ease forwards; }
+    .toast-exit  { animation: toastOut 0.3s ease forwards; }
+  </style>
+</head>
+
+<body class="topo-grid flex flex-col h-screen overflow-hidden">
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <header class="header-glow flex-shrink-0 flex items-center justify-between px-6 py-3
+                 bg-panel border-b border-border z-50">
+
+    <!-- Left: Logo + system name -->
+    <div class="flex items-center gap-4">
+      <!-- SVG Shield Icon -->
+      <svg width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 1L2 7V19C2 27.5 8.8 35.4 17 37C25.2 35.4 32 27.5 32 19V7L17 1Z"
+              stroke="#00ff88" stroke-width="1.5" fill="rgba(0,255,136,0.06)"/>
+        <path d="M11 19L15 23L23 14" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="font-display text-neon text-lg font-bold tracking-widest leading-none">IBVAP</div>
+        <div class="font-mono text-subtext text-xs tracking-wider mt-0.5">BORDER VIDEO ANALYTICS PLATFORM</div>
+      </div>
+    </div>
+
+    <!-- Center: System status pills -->
+    <div class="hidden md:flex items-center gap-3">
+      <div id="api-status-pill"
+           class="flex items-center gap-2 px-3 py-1.5 rounded border border-neon/20
+                  bg-neon/5 text-neon font-mono text-xs tracking-wider">
+        <span id="api-dot" class="live-dot w-2 h-2 rounded-full bg-neon inline-block"></span>
+        <span id="api-status-text">CONNECTING…</span>
+      </div>
+
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded border border-border
+                  bg-surface text-subtext font-mono text-xs tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-amber/70 inline-block"></span>
+        <span>CAM-EDGE-01</span>
+      </div>
+
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded border border-border
+                  bg-surface text-subtext font-mono text-xs tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-muted inline-block"></span>
+        <span>CAM-EDGE-02</span>
+      </div>
+    </div>
+
+    <!-- Right: Clock + Live badge -->
+    <div class="flex items-center gap-5">
+      <div class="text-right hidden sm:block">
+        <div id="clock" class="font-display text-neon text-xl font-semibold tracking-widest tabular-nums">
+          00:00:00
+        </div>
+        <div id="date-display" class="font-mono text-subtext text-xs tracking-wider mt-0.5 text-right">
+          LOADING…
+        </div>
+      </div>
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded-sm border border-red/40 bg-red/10">
+        <span class="live-dot w-2.5 h-2.5 rounded-full bg-red inline-block"></span>
+        <span class="font-display text-red text-xs font-bold tracking-widest">LIVE</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       MAIN LAYOUT  (sidebar + feed)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <main class="flex flex-1 min-h-0 overflow-hidden">
+
+    <!-- ── SIDEBAR: Stats + Controls ─────────────────────────────────────── -->
+    <aside class="flex-shrink-0 w-64 flex flex-col gap-4 p-4 bg-panel border-r border-border overflow-y-auto">
+
+      <!-- Threat Level -->
+      <div id="threat-card"
+           class="bracket stat-neon rounded border bg-card p-4 text-center">
+        <div class="font-mono text-subtext text-xs tracking-widest uppercase mb-1">Threat Level</div>
+        <div id="threat-level-label"
+             class="font-display text-4xl font-black tracking-wider threat-low leading-none">
+          LOW
+        </div>
+        <div class="mt-2 flex justify-center gap-1">
+          <div id="tl-bar-1" class="h-1.5 w-8 rounded-full bg-neon/80"></div>
+          <div id="tl-bar-2" class="h-1.5 w-8 rounded-full bg-border"></div>
+          <div id="tl-bar-3" class="h-1.5 w-8 rounded-full bg-border"></div>
+        </div>
+        <div class="font-mono text-subtext text-xs mt-2" id="threat-sub">System nominal</div>
+      </div>
+
+      <!-- Total Alerts -->
+      <div class="bracket stat-neon rounded border bg-card p-4">
+        <div class="font-mono text-subtext text-xs tracking-widest uppercase mb-1">Total Alerts</div>
+        <div id="stat-total" class="font-display text-neon text-3xl font-bold tabular-nums">0</div>
+        <div class="font-mono text-subtext text-xs mt-1">events logged</div>
+      </div>
+
+      <!-- Person Alerts -->
+      <div class="bracket stat-neon rounded border bg-card p-4">
+        <div class="font-mono text-subtext text-xs tracking-widest uppercase mb-1">Persons Detected</div>
+        <div id="stat-persons" class="font-display text-neon text-3xl font-bold tabular-nums">0</div>
+        <div class="font-mono text-subtext text-xs mt-1">intrusion alerts</div>
+      </div>
+
+      <!-- Vehicle Alerts -->
+      <div class="bracket stat-amber rounded border bg-card p-4">
+        <div class="font-mono text-subtext text-xs tracking-widest uppercase mb-1">Vehicles Detected</div>
+        <div id="stat-vehicles" class="font-display text-amber text-3xl font-bold tabular-nums">0</div>
+        <div class="font-mono text-subtext text-xs mt-1">vehicle alerts</div>
+      </div>
+
+      <!-- Last Detection -->
+      <div class="rounded border border-border bg-card p-4">
+        <div class="font-mono text-subtext text-xs tracking-widest uppercase mb-1">Last Detection</div>
+        <div id="stat-last" class="font-mono text-text text-xs leading-relaxed">—</div>
+      </div>
+
+      <!-- Avg Confidence -->
+      <div class="rounded border border-border bg-card p-4">
+        <div class="font-mono text-subtext text-xs tracking-widest uppercase mb-1">Avg Confidence</div>
+        <div id="stat-avg-conf" class="font-display text-text text-2xl font-semibold tabular-nums">—</div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-border"></div>
+
+      <!-- Polling indicator -->
+      <div class="rounded border border-border bg-card p-3">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono text-subtext text-xs tracking-wider">AUTO-REFRESH</span>
+          <span class="font-mono text-neon text-xs" id="poll-countdown">3s</span>
+        </div>
+        <div class="w-full h-1 bg-border rounded-full overflow-hidden">
+          <div id="poll-bar" class="h-full bg-neon rounded-full transition-none" style="width:100%"></div>
+        </div>
+      </div>
+
+      <!-- Manual refresh -->
+      <button id="btn-refresh"
+              class="w-full font-mono text-xs tracking-wider py-2.5 px-4 rounded border
+                     border-neon/30 text-neon bg-neon/5 hover:bg-neon/15 hover:border-neon/60
+                     transition-all duration-200 active:scale-95">
+        ⟳ FORCE REFRESH
+      </button>
+
+      <!-- Clear feed -->
+      <button id="btn-clear"
+              class="w-full font-mono text-xs tracking-wider py-2.5 px-4 rounded border
+                     border-red/20 text-red/70 bg-red/5 hover:bg-red/10 hover:text-red
+                     transition-all duration-200 active:scale-95">
+        ✕ CLEAR FEED
+      </button>
+
+    </aside>
+
+    <!-- ── MAIN PANEL: Filters + Alert Feed ──────────────────────────────── -->
+    <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+
+      <!-- Controls bar -->
+      <div class="flex-shrink-0 flex items-center justify-between px-5 py-3
+                  bg-panel border-b border-border gap-4">
+
+        <!-- Filter buttons -->
+        <div class="flex items-center gap-2">
+          <span class="font-mono text-subtext text-xs tracking-wider mr-1">FILTER:</span>
+
+          <button id="filter-all"
+                  class="filter-btn active font-mono text-xs tracking-wider px-3 py-1.5
+                         rounded border border-neon/30 text-neon/70
+                         hover:text-neon transition-all duration-150">
+            ALL
+          </button>
+          <button id="filter-person"
+                  class="filter-btn font-mono text-xs tracking-wider px-3 py-1.5
+                         rounded border border-border text-subtext
+                         hover:border-neon/30 hover:text-neon transition-all duration-150">
+            PERSON
+          </button>
+          <button id="filter-vehicle"
+                  class="filter-btn-amber filter-btn font-mono text-xs tracking-wider px-3 py-1.5
+                         rounded border border-border text-subtext
+                         hover:border-amber/30 hover:text-amber transition-all duration-150">
+            VEHICLE
+          </button>
+        </div>
+
+        <!-- Right: event count + sort label -->
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-subtext text-xs">
+            Showing <span id="feed-count" class="text-neon font-semibold">0</span> events
+          </span>
+          <span class="font-mono text-subtext text-xs border-l border-border pl-3">
+            ↓ LATEST FIRST
+          </span>
+        </div>
+      </div>
+
+      <!-- Alert Feed Grid -->
+      <div id="alert-feed" class="flex-1 overflow-y-auto p-4">
+
+        <!-- Empty state -->
+        <div id="empty-state"
+             class="flex flex-col items-center justify-center h-full text-center gap-4">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="rgba(0,255,136,0.15)" stroke-width="1.5"/>
+            <circle cx="32" cy="32" r="20" stroke="rgba(0,255,136,0.1)" stroke-width="1"/>
+            <circle cx="32" cy="32" r="3" fill="rgba(0,255,136,0.3)"/>
+            <line x1="32" y1="2"  x2="32" y2="12"  stroke="rgba(0,255,136,0.3)" stroke-width="1.5"/>
+            <line x1="32" y1="52" x2="32" y2="62"  stroke="rgba(0,255,136,0.3)" stroke-width="1.5"/>
+            <line x1="2"  y1="32" x2="12" y2="32"  stroke="rgba(0,255,136,0.3)" stroke-width="1.5"/>
+            <line x1="52" y1="32" x2="62" y2="32"  stroke="rgba(0,255,136,0.3)" stroke-width="1.5"/>
+          </svg>
+          <div>
+            <div class="font-display text-subtext text-sm tracking-widest uppercase">
+              Awaiting Detections
+            </div>
+            <div class="font-mono text-subtext/50 text-xs mt-2 tracking-wider">
+              System monitoring — no alerts ingested yet
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert cards injected here by app.js -->
+        <div id="cards-grid"
+             class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 auto-rows-max">
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       TOAST CONTAINER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div id="toast-container"
+       class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none">
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LIGHTBOX MODAL (click to enlarge snapshot)
+  ════════════════════════════════════════════════════════════════════════ -->
+  <div id="lightbox"
+       class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-sm"
+       role="dialog" aria-modal="true">
+    <div class="relative max-w-4xl w-full mx-4">
+      <button id="lightbox-close"
+              class="absolute -top-10 right-0 font-mono text-subtext hover:text-neon text-sm tracking-wider">
+        [ ESC ] CLOSE
+      </button>
+      <img id="lightbox-img" src="" alt="Snapshot" class="w-full rounded border border-neon/20 shadow-neon" />
+      <div id="lightbox-caption"
+           class="mt-3 font-mono text-subtext text-xs text-center tracking-wider"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
