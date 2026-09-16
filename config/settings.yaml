@@ -1,0 +1,16 @@
+video:
+  source: "videos/input.mp4"
+
+detection:
+  confidence: 0.3
+
+tracking:
+  enabled: true
+  tracking_confidence: 0.3
+
+suspicious_activity:
+  stationary_threshold: 300
+  restricted_zone: true
+
+dashboard:
+  refresh_rate: 1

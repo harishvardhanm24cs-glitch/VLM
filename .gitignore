@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+
+# Node / React Dashboard
+node_modules/
+dist/
+.npm/
+
+# Huge ML Datasets and Models (DO NOT UPLOAD)
+gadiya/
+gadiya_split/
+models/
+videos/
+*.pt
+*.pth
+*.weights
+
+# Env vars and sensitive data
+.env
+audit_ledger.json
+system_status.json
+
+# Debug images
+debug_*.jpg
+outputs/
