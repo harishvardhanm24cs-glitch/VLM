@@ -14,6 +14,7 @@ import json
 import hashlib
 import psycopg2
 from datetime import datetime
+# pyrefly: ignore [missing-import]
 from web3 import Web3
 
 # ---------------------------------------------------------------------------
