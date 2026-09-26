@@ -1,38 +1,20 @@
-"""
-blockchain_auditor.py - IBVAP Blockchain Audit Trail Daemon
-============================================================
-Standalone microservice that polls the PostgreSQL events table,
-hashes each new event with SHA-256, and anchors the hash on a local
-Ganache Ethereum node.  Audit receipts are appended to audit_ledger.json.
-
-CRITICAL: This file is 100% standalone.  It does NOT import or modify
-          main.py, edge_pipeline.py, or any other existing project file.
-"""
-
 import time
 import json
 import hashlib
 import psycopg2
 from datetime import datetime
-# pyrefly: ignore [missing-import]
+
 from web3 import Web3
 
-# ---------------------------------------------------------------------------
-# 1. Ethereum / Web3 initialisation
-# ---------------------------------------------------------------------------
+
 GANACHE_URL = "http://127.0.0.1:8545"
 w3 = Web3(Web3.HTTPProvider(GANACHE_URL))
 
 try:
     w3.eth.default_account = w3.eth.accounts[0]
-    print(f"[blockchain_auditor] Connected to Ganache. Default account: {w3.eth.default_account}")
 except Exception as exc:
-    print(f"[blockchain_auditor] WARNING - Ganache not reachable: {exc}")
-    print("[blockchain_auditor] Blockchain anchoring will be skipped until the node is available.")
+    pass
 
-# ---------------------------------------------------------------------------
-# 2. PostgreSQL connection parameters (must match docker-compose environment)
-# ---------------------------------------------------------------------------
 DB_PARAMS = {
     "dbname":   "ibvap_db",
     "user":     "ibvap_user",
@@ -51,7 +33,6 @@ def get_db_connection():
         conn = psycopg2.connect(**DB_PARAMS)
         return conn
     except psycopg2.OperationalError as exc:
-        print(f"[blockchain_auditor] DB connection failed: {exc}")
         return None
 
 
@@ -77,7 +58,6 @@ def anchor_on_blockchain(master_hash: str):
         })
         return tx_hash.hex()
     except Exception as exc:
-        print(f"[blockchain_auditor] Blockchain tx failed: {exc}")
         return None
 
 
@@ -94,7 +74,6 @@ def write_ledger_entry(event_id, blockchain_tx, hash_stored: str):
 
 
 def main():
-    print("[blockchain_auditor] Daemon starting ...")
     last_processed_time = datetime(2000, 1, 1)
 
     while True:
@@ -144,7 +123,7 @@ def main():
                     cur.close()
                 conn.close()
         else:
-            print("[blockchain_auditor] Skipping poll cycle - no DB connection.")
+            pass
 
         time.sleep(POLL_INTERVAL_SEC)
 

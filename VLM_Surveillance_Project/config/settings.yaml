@@ -61,3 +61,7 @@ L4:
   # L4 Configuration (Dashboard)
   enabled: true
   refresh_rate_seconds: 1
+
+L5:
+  # L5 Configuration (Facial Expression Analysis)
+  enabled: true

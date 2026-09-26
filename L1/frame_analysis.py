@@ -5,17 +5,15 @@ import yaml
 with open("../config/settings.yaml", "r") as f:
     config = yaml.safe_load(f)
 
-VIDEO_PATH = config['video']['source']
+VIDEO_PATH = config["video"]["source"]
+
 
 def run_frame_analysis():
     cap = cv2.VideoCapture(VIDEO_PATH)
 
     fps = cap.get(cv2.CAP_PROP_FPS)
-    frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
-    print("FPS:", fps)
-    print("Resolution:", frame_width, "x", frame_height)
+    int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
     previous_frame = None
     frame_number = 0
@@ -31,17 +29,17 @@ def run_frame_analysis():
         if previous_frame is not None:
             difference = cv2.absdiff(previous_frame, gray)
             _, threshold = cv2.threshold(difference, 25, 255, cv2.THRESH_BINARY)
-            
+
             changed_pixels = np.count_nonzero(threshold)
             total_pixels = gray.shape[0] * gray.shape[1]
-            change_percentage = (changed_pixels / total_pixels) * 100
-            
-            timestamp = frame_number / fps
-            print(f"Time: {timestamp:.2f}s | Changed pixels: {changed_pixels} | Change: {change_percentage:.2f}%")
+            (changed_pixels / total_pixels) * 100
+
+            frame_number / fps
 
         previous_frame = gray
 
     cap.release()
+
 
 if __name__ == "__main__":
     run_frame_analysis()

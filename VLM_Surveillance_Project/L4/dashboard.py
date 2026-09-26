@@ -6,14 +6,13 @@ Main Streamlit entry-point for the AI CCTV Surveillance platform.
 Run with:
     streamlit run L4/dashboard.py
 """
+
 import sys
 import time
-import threading
 from pathlib import Path
 
 import streamlit as st
 
-# ── Project root on sys.path ───────────────────────────────────────────────
 project_root = Path(__file__).resolve().parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
@@ -33,7 +32,6 @@ from L4.components import (
     render_stats,
 )
 
-# ── Page Config ────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="AI CCTV Surveillance",
     page_icon="🎯",
@@ -41,30 +39,27 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-CONFIG_PATH   = project_root / "config" / "settings.yaml"
-VIDEOS_DIR    = project_root / "videos"
-OUTPUT_VIDEO  = project_root / "outputs" / "detections" / "tracking_annotated.webm"
+CONFIG_PATH = project_root / "config" / "settings.yaml"
+VIDEOS_DIR = project_root / "videos"
+OUTPUT_VIDEO = project_root / "outputs" / "detections" / "tracking_annotated.webm"
 
-# ── Session State Bootstrap ────────────────────────────────────────────────
+
 _defaults = {
-    "video_path":     None,     # str: path to the uploaded video
-    "processing":     False,    # bool
-    "vlm_enabled":    True,     # bool: toggle in sidebar
-    "auto_refresh":   True,     # bool
-    # Live data queues (lists, appended by pipeline callbacks)
-    "q_stats":        [],
-    "q_l1":           [],
-    "q_events":       [],
-    "q_vlm":          [],
-    "q_status":       [],
-    "q_error":        [],
+    "video_path": None,
+    "processing": False,
+    "vlm_enabled": True,
+    "auto_refresh": True,
+    "q_stats": [],
+    "q_l1": [],
+    "q_events": [],
+    "q_vlm": [],
+    "q_status": [],
+    "q_error": [],
 }
 for k, v in _defaults.items():
     if k not in st.session_state:
         st.session_state[k] = v
 
-
-# ── Helpers ────────────────────────────────────────────────────────────────
 
 def _reset_queues():
     for key in ("q_stats", "q_l1", "q_events", "q_vlm", "q_status", "q_error"):
@@ -73,8 +68,8 @@ def _reset_queues():
 
 def _derive_layer_statuses() -> dict:
     status_list = st.session_state.q_status
-    errors      = st.session_state.q_error
-    processing  = st.session_state.processing
+    errors = st.session_state.q_error
+    st.session_state.processing
 
     if errors:
         unified = "ERROR"
@@ -86,16 +81,20 @@ def _derive_layer_statuses() -> dict:
     layers = ["L1", "L2", "Tracking", "L3", "VLM"]
 
     if unified == "RUNNING":
-        stats  = st.session_state.q_stats
-        l1     = st.session_state.q_l1
+        stats = st.session_state.q_stats
+        l1 = st.session_state.q_l1
         events = st.session_state.q_events
-        vlm    = st.session_state.q_vlm
+        vlm = st.session_state.q_vlm
         return {
-            "L1":       "RUNNING" if l1     else "INITIALIZING",
-            "L2":       "RUNNING" if stats  else "INITIALIZING",
-            "Tracking": "RUNNING" if stats  else "INITIALIZING",
-            "L3":       "RUNNING" if events else "RUNNING",
-            "VLM":      "RUNNING" if vlm    else ("RUNNING" if st.session_state.vlm_enabled else "OFFLINE"),
+            "L1": "RUNNING" if l1 else "INITIALIZING",
+            "L2": "RUNNING" if stats else "INITIALIZING",
+            "Tracking": "RUNNING" if stats else "INITIALIZING",
+            "L3": "RUNNING" if events else "RUNNING",
+            "VLM": (
+                "RUNNING"
+                if vlm
+                else ("RUNNING" if st.session_state.vlm_enabled else "OFFLINE")
+            ),
         }
     elif unified == "DONE":
         return {l: "DONE" for l in layers}
@@ -111,18 +110,20 @@ def _start_pipeline():
     if st.session_state.processing:
         return
     if not st.session_state.video_path:
-        st.session_state.q_error.append("No video/webcam selected. Please upload a video or use webcam first.")
+        st.session_state.q_error.append(
+            "No video/webcam selected. Please upload a video or use webcam first."
+        )
         return
 
     _reset_queues()
 
     state_queues = {
-        "stats":  st.session_state.q_stats,
-        "l1":     st.session_state.q_l1,
+        "stats": st.session_state.q_stats,
+        "l1": st.session_state.q_l1,
         "events": st.session_state.q_events,
-        "vlm":    st.session_state.q_vlm,
+        "vlm": st.session_state.q_vlm,
         "status": st.session_state.q_status,
-        "error":  st.session_state.q_error,
+        "error": st.session_state.q_error,
     }
 
     runner = PipelineRunner(
@@ -146,8 +147,6 @@ def _stop_pipeline():
     st.session_state.q_status.append("DONE")
 
 
-# ── Sidebar ────────────────────────────────────────────────────────────────
-
 with st.sidebar:
     st.markdown("## ⚙️ Settings")
 
@@ -161,7 +160,9 @@ with st.sidebar:
 
     st.markdown("---")
     st.markdown("**Auto-Refresh**")
-    auto = st.toggle("Auto-refresh UI while running", value=st.session_state.auto_refresh)
+    auto = st.toggle(
+        "Auto-refresh UI while running", value=st.session_state.auto_refresh
+    )
     st.session_state.auto_refresh = auto
 
     st.markdown("---")
@@ -182,14 +183,12 @@ with st.sidebar:
     )
 
 
-# ── Main Layout ────────────────────────────────────────────────────────────
-
 render_header()
 
-# ── Layer status bar ──────────────────────────────────────────────────────
+
 render_system_status(_derive_layer_statuses())
 
-# ── Upload + Controls ─────────────────────────────────────────────────────
+
 up_col, ctrl_col = st.columns([2, 1])
 
 with up_col:
@@ -234,7 +233,6 @@ with ctrl_col:
     if st.button("🔄 Refresh", use_container_width=True):
         st.rerun()
 
-    # Pipeline alive check
     runner: PipelineRunner | None = get_runner()
     if runner and not runner.is_alive() and st.session_state.processing:
         st.session_state.processing = False
@@ -242,23 +240,29 @@ with ctrl_col:
 
 st.markdown("---")
 
-# ── Results Tabs ───────────────────────────────────────────────────────────
-tab_video, tab_l1, tab_l2, tab_l3, tab_vlm, tab_history = st.tabs([
-    "📹 Annotated Video",
-    "📊 L1 Motion",
-    "🔍 L2 Detections",
-    "⚠️ L3 Events",
-    "🧠 VLM Analysis",
-    "📋 Full History",
-])
+
+tab_video, tab_l1, tab_l2, tab_l3, tab_vlm, tab_history = st.tabs(
+    [
+        "📹 Annotated Video",
+        "📊 L1 Motion",
+        "🔍 L2 Detections",
+        "⚠️ L3 Events",
+        "🧠 VLM Analysis",
+        "📋 Full History",
+    ]
+)
 
 with tab_video:
     if st.session_state.processing:
         live_img_path = project_root / "outputs" / "live_frame.jpg"
         if live_img_path.exists():
             import time
-            # Cache buster to force Streamlit to refresh the image
-            st.image(str(live_img_path), caption="Live Streaming (1 FPS)", use_container_width=True)
+
+            st.image(
+                str(live_img_path),
+                caption="Live Streaming (1 FPS)",
+                use_container_width=True,
+            )
         else:
             st.info("Starting live stream... please wait.")
     else:
@@ -287,7 +291,7 @@ with tab_history:
     st.markdown("---")
     render_stats(loader.get_stats())
 
-# ── Auto-refresh ───────────────────────────────────────────────────────────
+
 if st.session_state.auto_refresh and st.session_state.processing:
     time.sleep(1.5)
     st.rerun()

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="node" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#4c1d95" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="400" fill="url(#bg)" rx="10" />
+  
+  <g transform="translate(50, 150)" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    <rect x="0" y="0" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="60" y="30" text-anchor="middle">Input Frame</text>
+    
+    <rect x="150" y="-50" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="210" y="-20" text-anchor="middle">YOLO Det</text>
+
+    <rect x="150" y="50" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="210" y="80" text-anchor="middle">ByteTrack</text>
+
+    <rect x="300" y="-50" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="360" y="-20" text-anchor="middle">Veh. Classify</text>
+    
+    <rect x="300" y="50" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="360" y="80" text-anchor="middle">Face Quality</text>
+
+    <rect x="450" y="-50" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="510" y="-20" text-anchor="middle">ANPR / OCR</text>
+    
+    <rect x="450" y="50" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="510" y="80" text-anchor="middle">Face Recog</text>
+
+    <rect x="600" y="0" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="660" y="30" text-anchor="middle">Behaviour</text>
+    
+    <rect x="750" y="0" width="120" height="50" fill="url(#node)" rx="5" />
+    <text x="810" y="30" text-anchor="middle">VLM Layer</text>
+
+    <!-- Connectors -->
+    <path d="M 120 25 C 135 25, 135 -25, 150 -25" stroke="#94a3b8" stroke-width="2" fill="none" />
+    <path d="M 120 25 C 135 25, 135 75, 150 75" stroke="#94a3b8" stroke-width="2" fill="none" />
+    
+    <path d="M 270 -25 L 300 -25" stroke="#94a3b8" stroke-width="2" fill="none" />
+    <path d="M 270 75 L 300 75" stroke="#94a3b8" stroke-width="2" fill="none" />
+    
+    <path d="M 420 -25 L 450 -25" stroke="#94a3b8" stroke-width="2" fill="none" />
+    <path d="M 420 75 L 450 75" stroke="#94a3b8" stroke-width="2" fill="none" />
+    
+    <path d="M 570 -25 C 585 -25, 585 25, 600 25" stroke="#94a3b8" stroke-width="2" fill="none" />
+    <path d="M 570 75 C 585 75, 585 25, 600 25" stroke="#94a3b8" stroke-width="2" fill="none" />
+    
+    <path d="M 720 25 L 750 25" stroke="#94a3b8" stroke-width="2" fill="none" />
+  </g>
+</svg>

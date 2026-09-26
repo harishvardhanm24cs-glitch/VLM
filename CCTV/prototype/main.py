@@ -26,10 +26,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
-
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
     "postgresql+asyncpg://ibvap_user:ibvap_secret@localhost:5433/ibvap_db",
@@ -38,9 +34,6 @@ DATABASE_URL = os.getenv(
 SNAPSHOTS_DIR = Path(os.getenv("SNAPSHOTS_DIR", "./snapshots"))
 SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
 
-# ---------------------------------------------------------------------------
-# Database setup  (SQLAlchemy Core + databases async driver)
-# ---------------------------------------------------------------------------
 
 database = databases.Database(DATABASE_URL)
 
@@ -63,15 +56,11 @@ events_table = sqlalchemy.Table(
     ),
 )
 
-# Sync engine used only at startup to run CREATE TABLE IF NOT EXISTS
+
 engine = sqlalchemy.create_engine(
     DATABASE_URL.replace("+asyncpg", ""),
     pool_pre_ping=True,
 )
-
-# ---------------------------------------------------------------------------
-# Pydantic models
-# ---------------------------------------------------------------------------
 
 
 class EventIngest(BaseModel):
@@ -100,13 +89,9 @@ class EventResponse(BaseModel):
     event_type: str
     confidence: float
     bounding_box: dict | None
-    snapshot_url: str | None   # Absolute URL; resolvable via the /snapshots static mount
+    snapshot_url: str | None
     timestamp: datetime
 
-
-# ---------------------------------------------------------------------------
-# FastAPI application
-# ---------------------------------------------------------------------------
 
 app = FastAPI(
     title="IBVAP Backend API",
@@ -114,7 +99,7 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Allow all origins for the local prototype; restrict in production.
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -123,24 +108,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount /snapshots as a static route so the frontend can display images directly.
+
 app.mount("/snapshots", StaticFiles(directory=str(SNAPSHOTS_DIR)), name="snapshots")
 
-# Mount /static to serve offline CSS, JS, and other local assets.
+
 STATIC_DIR = Path(__file__).parent / "static"
 STATIC_DIR.mkdir(parents=True, exist_ok=True)
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 
-# ---------------------------------------------------------------------------
-# Lifecycle hooks
-# ---------------------------------------------------------------------------
-
-
 @app.on_event("startup")
 async def startup() -> None:
     """Create tables (idempotent) and open the async DB connection pool."""
-    metadata.create_all(engine)  # sync DDL — runs once at boot
+    metadata.create_all(engine)
     await database.connect()
 
 
@@ -149,13 +129,10 @@ async def shutdown() -> None:
     await database.disconnect()
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
 SENDER_EMAIL = " "
 APP_PASSWORD = " "
 RECEIVER_EMAIL = " "
+
 
 def send_escalation_email(camera_id: str, event_type: str, timestamp: datetime) -> None:
     """Synchronously sends an escalation email for critical events."""
@@ -170,15 +147,14 @@ def send_escalation_email(camera_id: str, event_type: str, timestamp: datetime) 
     msg["Subject"] = subject
     msg["From"] = SENDER_EMAIL
     msg["To"] = RECEIVER_EMAIL
-    
+
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(SENDER_EMAIL, APP_PASSWORD)
             server.send_message(msg)
-            print(f"Escalation email sent for {event_type} on {camera_id}.")
     except Exception as exc:
-        print(f"Failed to send email: {exc}")
+        pass
 
 
 def _save_snapshot(b64_data: str, event_id: str) -> str:
@@ -189,7 +165,7 @@ def _save_snapshot(b64_data: str, event_id: str) -> str:
     Raises HTTP 400 on invalid Base64 input.
     """
     try:
-        # Strip optional data-URI prefix (data:image/jpeg;base64,...)
+
         if "," in b64_data:
             b64_data = b64_data.split(",", 1)[1]
         image_bytes = base64.b64decode(b64_data, validate=True)
@@ -218,11 +194,6 @@ def _row_to_response(row: Any, base_url: str) -> EventResponse:
     )
 
 
-# ---------------------------------------------------------------------------
-# API Routes
-# ---------------------------------------------------------------------------
-
-
 @app.post(
     "/api/events",
     response_model=EventResponse,
@@ -230,7 +201,9 @@ def _row_to_response(row: Any, base_url: str) -> EventResponse:
     summary="Ingest a new anomaly event from the edge pipeline",
     tags=["Events"],
 )
-async def ingest_event(payload: EventIngest, background_tasks: BackgroundTasks) -> EventResponse:
+async def ingest_event(
+    payload: EventIngest, background_tasks: BackgroundTasks
+) -> EventResponse:
     """
     Accept a JSON alert from an edge node:
       1. Decodes `snapshot_b64` and writes JPEG to disk.
@@ -259,7 +232,9 @@ async def ingest_event(payload: EventIngest, background_tasks: BackgroundTasks) 
     )
 
     if "LOITERING" in payload.event_type.upper():
-        background_tasks.add_task(send_escalation_email, payload.camera_id, payload.event_type, now)
+        background_tasks.add_task(
+            send_escalation_email, payload.camera_id, payload.event_type, now
+        )
 
     base_url = "http://localhost:8000"
     return EventResponse(
@@ -282,9 +257,7 @@ async def ingest_event(payload: EventIngest, background_tasks: BackgroundTasks) 
 async def get_events() -> list[EventResponse]:
     """Return up to 50 most-recent events, ordered by timestamp descending."""
     rows = await database.fetch_all(
-        events_table.select()
-        .order_by(events_table.c.timestamp.desc())
-        .limit(50)
+        events_table.select().order_by(events_table.c.timestamp.desc()).limit(50)
     )
     base_url = "http://localhost:8000"
     return [_row_to_response(row, base_url) for row in rows]
@@ -320,4 +293,3 @@ async def dashboard_js() -> FileResponse:
 async def dashboard_js_v2() -> FileResponse:
     """Serve the v2 dashboard JavaScript bundle."""
     return FileResponse("app_v2.js", media_type="application/javascript")
-

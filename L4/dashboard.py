@@ -18,6 +18,6 @@ with col2:
     st.metric(label="Persons Detected", value=0)
     st.metric(label="Vehicles Detected", value=0)
     st.metric(label="Alerts", value=0)
-    
+
     st.subheader("Alerts Log")
     st.warning("No suspicious activity detected yet.")

@@ -27,3 +27,13 @@ system_status.json
 # Debug images
 debug_*.jpg
 outputs/
+
+# Massive unneeded datasets
+datasets/
+Indian Car Recommendation System/
+PSNA BUS/
+PSNA_Buses_JPG/
+L_PSNABus/
+debug_outputs/
+gadiya_cropped/
+CCTV/prototype/snapshots/
